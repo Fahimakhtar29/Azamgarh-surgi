@@ -1,0 +1,6 @@
+{
+  "name": "Azamgarh Medical & Surgical",
+  "description": "Premium Indian medical device and home healthcare e-commerce store with genuine monitoring equipment, fast dispatch, and pan-India delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
