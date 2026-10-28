@@ -7,10 +7,10 @@ export const CustomerReviews: React.FC = () => {
     <section className="py-14 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-800">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#E65100]">
             Real Experiences
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display mt-1">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display mt-1">
             What Our Customers Say
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1">

@@ -150,12 +150,12 @@ export const AdminDashboard: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-6 border-b border-slate-200 gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 bg-slate-900 text-teal-400 font-mono text-[11px] font-bold rounded">
+              <span className="px-2.5 py-0.5 bg-[#0F172A] text-[#F57C00] font-mono text-[11px] font-bold rounded">
                 ADMIN ACCESS
               </span>
               <span className="text-xs text-slate-500">{brandConfig.brandName}</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display mt-1">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#0F172A] font-display mt-1">
               Store Management Console
             </h1>
           </div>
@@ -169,7 +169,7 @@ export const AdminDashboard: React.FC = () => {
             </button>
             <button
               onClick={handleOpenAdd}
-              className="px-4 py-2 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs"
+              className="px-4 py-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer shadow-xs"
             >
               <Plus className="w-4 h-4" />
               <span>Add New Product</span>
@@ -183,7 +183,7 @@ export const AdminDashboard: React.FC = () => {
             onClick={() => setAdminTab('overview')}
             className={`px-4 py-2 rounded-lg transition-colors cursor-pointer ${
               adminTab === 'overview'
-                ? 'bg-slate-900 text-white'
+                ? 'bg-[#0F172A] text-white'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-white'
             }`}
           >
@@ -193,7 +193,7 @@ export const AdminDashboard: React.FC = () => {
             onClick={() => setAdminTab('products')}
             className={`px-4 py-2 rounded-lg transition-colors cursor-pointer ${
               adminTab === 'products'
-                ? 'bg-slate-900 text-white'
+                ? 'bg-[#0F172A] text-white'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-white'
             }`}
           >
@@ -203,7 +203,7 @@ export const AdminDashboard: React.FC = () => {
             onClick={() => setAdminTab('orders')}
             className={`px-4 py-2 rounded-lg transition-colors cursor-pointer ${
               adminTab === 'orders'
-                ? 'bg-slate-900 text-white'
+                ? 'bg-[#0F172A] text-white'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-white'
             }`}
           >
@@ -213,7 +213,7 @@ export const AdminDashboard: React.FC = () => {
             onClick={() => setAdminTab('settings')}
             className={`px-4 py-2 rounded-lg transition-colors cursor-pointer ${
               adminTab === 'settings'
-                ? 'bg-slate-900 text-white'
+                ? 'bg-[#0F172A] text-white'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-white'
             }`}
           >
@@ -228,7 +228,7 @@ export const AdminDashboard: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-2xs space-y-1">
                 <span className="text-xs font-bold text-slate-500 uppercase">Total Sales Volume</span>
-                <div className="text-2xl font-extrabold text-slate-900 font-mono">
+                <div className="text-2xl font-extrabold text-[#0F172A] font-mono">
                   ₹{(totalSalesRevenue + 248500).toLocaleString('en-IN')}
                 </div>
                 <span className="text-[11px] text-emerald-700 font-semibold">
@@ -238,17 +238,17 @@ export const AdminDashboard: React.FC = () => {
 
               <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-2xs space-y-1">
                 <span className="text-xs font-bold text-slate-500 uppercase">Live Orders Placed</span>
-                <div className="text-2xl font-extrabold text-slate-900 font-mono">
+                <div className="text-2xl font-extrabold text-[#0F172A] font-mono">
                   {orders.length + 86}
                 </div>
-                <span className="text-[11px] text-teal-700 font-semibold">
+                <span className="text-[11px] text-[#E65100] font-semibold">
                   100% Pan-India Dispatches
                 </span>
               </div>
 
               <div className="p-5 bg-white rounded-2xl border border-slate-200 shadow-2xs space-y-1">
                 <span className="text-xs font-bold text-slate-500 uppercase">Active Medical SKUs</span>
-                <div className="text-2xl font-extrabold text-slate-900 font-mono">
+                <div className="text-2xl font-extrabold text-[#0F172A] font-mono">
                   {products.length}
                 </div>
                 <span className="text-[11px] text-slate-500">14 Active Categories</span>
@@ -268,12 +268,12 @@ export const AdminDashboard: React.FC = () => {
             {/* Recent Orders Overview */}
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-2xs space-y-4">
               <div className="flex items-center justify-between">
-                <h3 className="text-sm font-bold text-slate-900 font-display">
+                <h3 className="text-sm font-bold text-[#0F172A] font-display">
                   Recent Store Orders
                 </h3>
                 <button
                   onClick={() => setAdminTab('orders')}
-                  className="text-xs text-teal-800 font-semibold hover:underline"
+                  className="text-xs text-[#F57C00] font-semibold hover:underline cursor-pointer"
                 >
                   View All Orders →
                 </button>
@@ -283,7 +283,7 @@ export const AdminDashboard: React.FC = () => {
                 {orders.slice(0, 5).map((o) => (
                   <div key={o.id} className="py-3 flex items-center justify-between">
                     <div>
-                      <span className="font-bold font-mono text-slate-900 block">
+                      <span className="font-bold font-mono text-[#0F172A] block">
                         {o.orderNumber} · {o.shippingAddress.fullName}
                       </span>
                       <span className="text-slate-400">
@@ -291,10 +291,10 @@ export const AdminDashboard: React.FC = () => {
                       </span>
                     </div>
                     <div className="text-right">
-                      <span className="font-bold font-mono text-slate-900 block">
+                      <span className="font-bold font-mono text-[#0F172A] block">
                         ₹{o.totalAmount.toLocaleString('en-IN')}
                       </span>
-                      <span className="px-2 py-0.5 bg-teal-100 text-teal-800 rounded font-semibold text-[10px]">
+                      <span className="px-2 py-0.5 bg-orange-50 text-[#E65100] border border-orange-200 rounded font-semibold text-[10px]">
                         {o.status}
                       </span>
                     </div>
@@ -315,7 +315,7 @@ export const AdminDashboard: React.FC = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Filter products by title, brand, or SKU..."
-                  className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs outline-none focus:border-teal-700"
+                  className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs outline-none focus:border-[#F57C00]"
                 />
                 <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
               </div>
@@ -323,7 +323,7 @@ export const AdminDashboard: React.FC = () => {
               <div className="flex items-center gap-2">
                 <button
                   onClick={resetProductsToDefault}
-                  className="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold flex items-center gap-1 cursor-pointer"
+                  className="px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold flex items-center gap-1 cursor-pointer transition-colors"
                   title="Reload original demo products"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
@@ -357,7 +357,7 @@ export const AdminDashboard: React.FC = () => {
                           className="w-10 h-10 rounded object-cover shrink-0 border border-slate-200"
                         />
                         <div className="truncate">
-                          <span className="font-bold text-slate-900 truncate block">
+                          <span className="font-bold text-[#0F172A] truncate block">
                             {p.name}
                           </span>
                           <span className="text-slate-400 text-[11px]">{p.brand}</span>
@@ -376,7 +376,7 @@ export const AdminDashboard: React.FC = () => {
                           {p.stock} units
                         </span>
                       </td>
-                      <td className="p-3 font-mono font-bold text-slate-900">
+                      <td className="p-3 font-mono font-bold text-[#0F172A]">
                         ₹{p.sellingPrice.toLocaleString('en-IN')}
                       </td>
                       <td className="p-3 font-mono text-slate-400 line-through">
@@ -390,7 +390,7 @@ export const AdminDashboard: React.FC = () => {
                             </span>
                           )}
                           {p.isFeatured && (
-                            <span className="text-[10px] font-bold bg-teal-100 text-teal-800 px-1.5 py-0.5 rounded">
+                            <span className="text-[10px] font-bold bg-orange-50 text-[#E65100] border border-orange-200 px-1.5 py-0.5 rounded">
                               Featured
                             </span>
                           )}
@@ -400,7 +400,7 @@ export const AdminDashboard: React.FC = () => {
                         <div className="flex items-center justify-end gap-1.5">
                           <button
                             onClick={() => handleOpenEdit(p)}
-                            className="p-1.5 text-slate-600 hover:text-teal-800 rounded hover:bg-slate-100 cursor-pointer"
+                            className="p-1.5 text-slate-600 hover:text-[#F57C00] rounded hover:bg-slate-100 cursor-pointer"
                             title="Edit"
                           >
                             <Edit2 className="w-3.5 h-3.5" />
@@ -713,7 +713,7 @@ export const AdminDashboard: React.FC = () => {
                     onChange={(e) =>
                       setFormProduct({ ...formProduct, isBestSeller: e.target.checked })
                     }
-                    className="text-teal-700"
+                    className="text-[#F57C00] accent-[#F57C00]"
                   />
                   <span>Mark as Best Seller</span>
                 </label>
@@ -725,7 +725,7 @@ export const AdminDashboard: React.FC = () => {
                     onChange={(e) =>
                       setFormProduct({ ...formProduct, isFeatured: e.target.checked })
                     }
-                    className="text-teal-700"
+                    className="text-[#F57C00] accent-[#F57C00]"
                   />
                   <span>Mark as Featured</span>
                 </label>
@@ -735,13 +735,13 @@ export const AdminDashboard: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setIsAddModalOpen(false)}
-                  className="px-4 py-2 border border-slate-300 rounded-lg font-semibold"
+                  className="px-4 py-2 border border-slate-300 rounded-lg font-semibold cursor-pointer hover:bg-slate-50"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 bg-teal-800 text-white rounded-lg font-bold"
+                  className="px-5 py-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg font-bold transition-colors cursor-pointer"
                 >
                   Save Product
                 </button>

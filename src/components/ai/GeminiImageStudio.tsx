@@ -150,13 +150,13 @@ export const GeminiImageStudio: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2">
-            <span className="p-2 rounded-xl bg-purple-100 text-purple-800">
+            <span className="p-2 rounded-xl bg-orange-50 text-[#E65100] border border-orange-200">
               <Wand2 className="w-5 h-5" />
             </span>
-            <h2 className="text-xl font-bold text-slate-900 font-display">
+            <h2 className="text-xl font-bold text-[#0F172A] font-display">
               AI Medical Device Studio
             </h2>
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 font-medium">
+            <span className="text-xs px-2.5 py-0.5 rounded-full bg-orange-50 text-[#E65100] border border-orange-200 font-medium">
               gemini-nano-banana-2.1
             </span>
           </div>
@@ -175,7 +175,7 @@ export const GeminiImageStudio: React.FC = () => {
             }}
             className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
               mode === 'create'
-                ? 'bg-white text-purple-800 shadow-2xs'
+                ? 'bg-white text-[#E65100] shadow-2xs'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -191,7 +191,7 @@ export const GeminiImageStudio: React.FC = () => {
             }}
             className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all ${
               mode === 'edit'
-                ? 'bg-white text-purple-800 shadow-2xs'
+                ? 'bg-white text-[#E65100] shadow-2xs'
                 : 'text-slate-600 hover:text-slate-900'
             }`}
           >
@@ -346,7 +346,7 @@ export const GeminiImageStudio: React.FC = () => {
             type="button"
             onClick={handleGenerate}
             disabled={!prompt.trim() || loading}
-            className="w-full py-3 bg-purple-700 hover:bg-purple-800 disabled:bg-slate-300 text-white font-semibold text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 disabled:cursor-not-allowed"
+            className="w-full py-3 bg-[#F57C00] hover:bg-[#E65100] disabled:bg-slate-300 text-white font-semibold text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 disabled:cursor-not-allowed"
           >
             {loading ? (
               <>

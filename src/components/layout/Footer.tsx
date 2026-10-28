@@ -28,8 +28,8 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-teal-700 text-white flex items-center justify-center">
-                <Stethoscope className="w-5 h-5 text-teal-200" />
+              <div className="w-9 h-9 rounded-lg bg-[#F57C00] text-white flex items-center justify-center">
+                <Stethoscope className="w-5 h-5 text-white" />
               </div>
               <span className="text-base font-bold text-white tracking-tight font-display uppercase">
                 {brandConfig.brandName}
@@ -42,19 +42,19 @@ export const Footer: React.FC = () => {
 
             <div className="space-y-1.5 pt-2 text-slate-400">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-teal-400 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#F57C00] shrink-0 mt-0.5" />
                 <span>{brandConfig.address}, {brandConfig.city}, {brandConfig.state} – {brandConfig.pincode}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-teal-400 shrink-0" />
+                <Phone className="w-4 h-4 text-[#F57C00] shrink-0" />
                 <span>Direct Support: {brandConfig.supportPhoneFormatted}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-teal-400 shrink-0" />
+                <Mail className="w-4 h-4 text-[#F57C00] shrink-0" />
                 <span>{brandConfig.email}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-teal-400 shrink-0" />
+                <Clock className="w-4 h-4 text-[#F57C00] shrink-0" />
                 <span>{brandConfig.operatingHours}</span>
               </div>
             </div>
@@ -109,7 +109,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => viewCategory('combo-kits')}
-                  className="hover:text-white transition-colors cursor-pointer text-teal-400 font-semibold"
+                  className="hover:text-white transition-colors cursor-pointer text-[#F57C00] font-semibold"
                 >
                   Healthcare Combo Kits
                 </button>
@@ -126,7 +126,7 @@ export const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => setActiveView('track-order')}
-                  className="hover:text-white transition-colors cursor-pointer text-teal-400 font-medium"
+                  className="hover:text-white transition-colors cursor-pointer text-orange-400 font-medium"
                 >
                   Track Your Order
                 </button>
@@ -189,7 +189,7 @@ export const Footer: React.FC = () => {
               <li className="pt-2">
                 <button
                   onClick={() => setActiveView('admin')}
-                  className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-teal-300 rounded border border-slate-700 text-[11px] font-semibold transition-colors cursor-pointer"
+                  className="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-orange-400 rounded border border-slate-700 text-[11px] font-semibold transition-colors cursor-pointer"
                 >
                   Store Admin Portal
                 </button>

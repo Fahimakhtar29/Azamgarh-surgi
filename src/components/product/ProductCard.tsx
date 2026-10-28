@@ -49,7 +49,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div
       onClick={() => viewProduct(product)}
-      className="group bg-white rounded-xl border border-slate-200/90 hover:border-teal-600/50 hover:shadow-md transition-all duration-200 flex flex-col overflow-hidden relative cursor-pointer"
+      className="group bg-white rounded-xl border border-slate-200/90 hover:border-[#F57C00]/60 hover:shadow-md transition-all duration-200 flex flex-col overflow-hidden relative cursor-pointer"
     >
       {/* Top Banner tags / Deal highlights */}
       <div className="absolute top-2.5 left-2.5 z-10 flex flex-col gap-1">
@@ -59,7 +59,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </span>
         )}
         {product.dealTag && (
-          <span className="bg-teal-900 text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shadow-xs">
+          <span className="bg-[#0F172A] text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide shadow-xs">
             {product.dealTag}
           </span>
         )}
@@ -88,7 +88,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           onClick={handleToggleCompare}
           className={`p-1.5 rounded-full backdrop-blur-xs transition-colors cursor-pointer shadow-xs ${
             isCompared
-              ? 'bg-amber-50 text-amber-700 border border-amber-300'
+              ? 'bg-orange-50 text-[#E65100] border border-orange-200'
               : 'bg-white/90 hover:bg-white text-slate-400 hover:text-slate-700 border border-slate-200'
           }`}
           title="Compare specifications"
@@ -115,7 +115,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               e.stopPropagation();
               setQuickViewProduct(product);
             }}
-            className="w-full py-1.5 bg-slate-900/85 hover:bg-slate-900 text-white rounded text-xs font-medium backdrop-blur-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+            className="w-full py-1.5 bg-[#0F172A]/90 hover:bg-[#0F172A] text-white rounded text-xs font-medium backdrop-blur-xs flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
           >
             <Eye className="w-3.5 h-3.5" />
             <span>Quick View</span>
@@ -128,22 +128,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div>
           {/* Brand Kicker */}
           <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-            <span className="font-semibold text-teal-800 uppercase tracking-wider text-[11px]">
+            <span className="font-bold text-[#E65100] uppercase tracking-wider text-[11px]">
               {product.brand}
             </span>
             <span className="text-[11px] text-slate-400">SKU: {product.sku}</span>
           </div>
 
           {/* Product Title */}
-          <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 leading-snug group-hover:text-teal-900 transition-colors">
+          <h3 className="text-sm font-semibold text-[#0F172A] line-clamp-2 leading-snug group-hover:text-[#F57C00] transition-colors">
             {product.name}
           </h3>
 
           {/* Ratings & Reviews */}
           <div className="flex items-center gap-1.5 mt-2 text-xs">
-            <div className="flex items-center gap-1 bg-emerald-50 text-emerald-800 font-bold px-1.5 py-0.5 rounded text-[11px]">
+            <div className="flex items-center gap-1 bg-amber-50 text-amber-900 font-bold px-1.5 py-0.5 rounded text-[11px]">
               <span>{product.rating.toFixed(1)}</span>
-              <Star className="w-3 h-3 fill-emerald-600 text-emerald-600" />
+              <Star className="w-3 h-3 fill-amber-500 text-amber-500" />
             </div>
             <span className="text-slate-400">·</span>
             <span className="text-slate-500 text-[11px]">
@@ -186,7 +186,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               e.stopPropagation();
               addToCart(product, 1);
             }}
-            className="w-full py-2 px-2 bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-200/80 rounded-lg text-xs font-semibold flex items-center justify-center gap-1 transition-colors cursor-pointer"
+            className="w-full py-2 px-2 bg-orange-50 hover:bg-orange-100 text-[#E65100] border border-orange-200/90 rounded-lg text-xs font-semibold flex items-center justify-center gap-1 transition-colors cursor-pointer"
           >
             <ShoppingCart className="w-3.5 h-3.5" />
             <span>Add to Cart</span>
@@ -195,7 +195,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <button
             type="button"
             onClick={handleBuyNow}
-            className="w-full py-2 px-2 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-1 transition-colors cursor-pointer shadow-xs"
+            className="w-full py-2 px-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-1 transition-colors cursor-pointer shadow-xs"
           >
             <Zap className="w-3.5 h-3.5 fill-white" />
             <span>Buy Now</span>

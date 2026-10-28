@@ -19,11 +19,11 @@ export const BestDeals: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-3">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-rose-800">
-              <Tag className="w-3.5 h-3.5 text-rose-600" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E65100]">
+              <Tag className="w-3.5 h-3.5 text-[#F57C00]" />
               <span>Smart Savings on Diagnostics</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display mt-1">
               Today's Healthcare Deals
             </h2>
           </div>
@@ -34,8 +34,8 @@ export const BestDeals: React.FC = () => {
               onClick={() => setDealTab('all')}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer whitespace-nowrap ${
                 dealTab === 'all'
-                  ? 'bg-teal-800 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#E65100]'
               }`}
             >
               All Deals
@@ -44,8 +44,8 @@ export const BestDeals: React.FC = () => {
               onClick={() => setDealTab('under499')}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer whitespace-nowrap ${
                 dealTab === 'under499'
-                  ? 'bg-teal-800 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#E65100]'
               }`}
             >
               Under ₹499
@@ -54,8 +54,8 @@ export const BestDeals: React.FC = () => {
               onClick={() => setDealTab('under999')}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer whitespace-nowrap ${
                 dealTab === 'under999'
-                  ? 'bg-teal-800 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#E65100]'
               }`}
             >
               Under ₹999
@@ -64,8 +64,8 @@ export const BestDeals: React.FC = () => {
               onClick={() => setDealTab('highDiscount')}
               className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer whitespace-nowrap ${
                 dealTab === 'highDiscount'
-                  ? 'bg-teal-800 text-white shadow-xs'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#E65100]'
               }`}
             >
               40%+ Discount
@@ -82,7 +82,7 @@ export const BestDeals: React.FC = () => {
         <div className="mt-8 text-center">
           <button
             onClick={() => setActiveView('offers')}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-800 hover:text-teal-900 bg-white px-5 py-2.5 rounded-lg border border-teal-300 hover:bg-teal-50 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E65100] hover:text-[#E65100] bg-white px-5 py-2.5 rounded-lg border border-orange-200 hover:bg-orange-50 transition-colors cursor-pointer shadow-2xs"
           >
             <span>View All Discounted Healthcare Equipment</span>
             <ArrowRight className="w-3.5 h-3.5" />

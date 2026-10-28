@@ -12,15 +12,15 @@ export const DiabetesCareSection: React.FC = () => {
   ).slice(0, 4);
 
   return (
-    <section className="py-14 bg-white border-b border-slate-200">
+    <section className="py-14 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-2">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-teal-800">
-              <Droplet className="w-3.5 h-3.5 text-teal-600" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E65100]">
+              <Droplet className="w-3.5 h-3.5 text-[#F57C00]" />
               <span>Glycemic Management</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display mt-1">
               Diabetes Care & Monitoring
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -30,7 +30,7 @@ export const DiabetesCareSection: React.FC = () => {
 
           <button
             onClick={() => viewCategory('glucometers')}
-            className="text-xs font-semibold text-teal-800 hover:text-teal-900 flex items-center gap-1 cursor-pointer shrink-0"
+            className="text-xs font-semibold text-[#F57C00] hover:text-[#E65100] flex items-center gap-1 cursor-pointer shrink-0"
           >
             <span>View All Glucometers</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -45,7 +45,7 @@ export const DiabetesCareSection: React.FC = () => {
         </div>
 
         {/* Educational Section: "Understanding Blood Sugar Monitoring" */}
-        <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 sm:p-8">
+        <div className="bg-slate-50/80 rounded-2xl border border-slate-200/90 p-6 sm:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-4 h-60 rounded-xl overflow-hidden shadow-sm border border-slate-200">
               <img
@@ -56,12 +56,12 @@ export const DiabetesCareSection: React.FC = () => {
             </div>
 
             <div className="lg:col-span-8 space-y-3">
-              <div className="flex items-center gap-2 text-xs font-bold text-teal-800 uppercase tracking-wider">
-                <BookOpen className="w-4 h-4 text-teal-700" />
+              <div className="flex items-center gap-2 text-xs font-bold text-[#E65100] uppercase tracking-wider">
+                <BookOpen className="w-4 h-4 text-[#F57C00]" />
                 <span>Patient Informational Guide</span>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 font-display">
+              <h3 className="text-xl font-bold text-[#0F172A] font-display">
                 Understanding Blood Sugar Monitoring at Home
               </h3>
 

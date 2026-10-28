@@ -80,25 +80,25 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen py-8">
+    <div className="bg-white min-h-screen py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-xs text-slate-500 mb-6 flex-wrap">
           <button
             onClick={() => setActiveView('home')}
-            className="hover:text-teal-800 transition-colors cursor-pointer"
+            className="hover:text-[#F57C00] transition-colors cursor-pointer"
           >
             Home
           </button>
           <ChevronRight className="w-3.5 h-3.5" />
           <button
             onClick={() => viewCategory(product.category)}
-            className="hover:text-teal-800 transition-colors cursor-pointer capitalize"
+            className="hover:text-[#F57C00] transition-colors cursor-pointer capitalize"
           >
             {product.category.replace('-', ' ')}
           </button>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-slate-900 font-medium truncate max-w-xs">{product.name}</span>
+          <span className="text-[#0F172A] font-medium truncate max-w-xs">{product.name}</span>
         </nav>
 
         {/* Main Grid: Gallery Left, Purchase Module Right */}
@@ -159,7 +159,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
                     onClick={() => setSelectedImageIdx(idx)}
                     className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all cursor-pointer shrink-0 ${
                       selectedImageIdx === idx
-                        ? 'border-teal-700 ring-2 ring-teal-100 shadow-sm'
+                        ? 'border-[#F57C00] ring-2 ring-orange-100 shadow-sm'
                         : 'border-slate-200 hover:border-slate-300'
                     }`}
                   >
@@ -177,18 +177,18 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
             {/* Micro Guarantees below gallery */}
             <div className="grid grid-cols-3 gap-3 mt-6 pt-6 border-t border-slate-100 text-center text-xs text-slate-600">
               <div className="p-3 bg-slate-50 rounded-xl">
-                <ShieldCheck className="w-5 h-5 text-teal-700 mx-auto mb-1" />
-                <span className="font-semibold block text-slate-900">Original Certified</span>
+                <ShieldCheck className="w-5 h-5 text-[#F57C00] mx-auto mb-1" />
+                <span className="font-semibold block text-[#0F172A]">Original Certified</span>
                 <span className="text-[11px] text-slate-500">Official Brand Sealed</span>
               </div>
               <div className="p-3 bg-slate-50 rounded-xl">
-                <Truck className="w-5 h-5 text-teal-700 mx-auto mb-1" />
-                <span className="font-semibold block text-slate-900">Fast Regional Dispatch</span>
+                <Truck className="w-5 h-5 text-[#F57C00] mx-auto mb-1" />
+                <span className="font-semibold block text-[#0F172A]">Fast Regional Dispatch</span>
                 <span className="text-[11px] text-slate-500">Same-Day Packing</span>
               </div>
               <div className="p-3 bg-slate-50 rounded-xl">
-                <RotateCcw className="w-5 h-5 text-teal-700 mx-auto mb-1" />
-                <span className="font-semibold block text-slate-900">7-Day Replacement</span>
+                <RotateCcw className="w-5 h-5 text-[#F57C00] mx-auto mb-1" />
+                <span className="font-semibold block text-[#0F172A]">7-Day Replacement</span>
                 <span className="text-[11px] text-slate-500">For Operational Defects</span>
               </div>
             </div>
@@ -198,13 +198,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
           <div className="lg:col-span-5 bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/90 shadow-xs space-y-5">
             <div>
               <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-                <span className="font-bold text-teal-800 uppercase tracking-wider">
+                <span className="font-bold text-[#E65100] uppercase tracking-wider">
                   {product.brand}
                 </span>
                 <span className="text-slate-400 font-mono">SKU: {product.sku}</span>
               </div>
 
-              <h1 className="text-xl sm:text-2xl font-bold text-slate-900 font-display leading-snug">
+              <h1 className="text-xl sm:text-2xl font-bold text-[#0F172A] font-display leading-snug">
                 {product.name}
               </h1>
 
@@ -245,10 +245,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
               <span>In Stock & Ready for Immediate Dispatch ({product.stock} units left)</span>
             </div>
 
-            {/* Pincode Delivery Checker (Prompt #18) */}
-            <div className="p-4 bg-slate-50 rounded-xl border border-slate-200/80 space-y-2">
-              <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800">
-                <MapPin className="w-4 h-4 text-teal-700" />
+            {/* Pincode Delivery Checker */}
+            <div className="p-4 bg-orange-50/40 rounded-xl border border-orange-200/70 space-y-2">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-[#0F172A]">
+                <MapPin className="w-4 h-4 text-[#F57C00]" />
                 <span>Check Delivery & Cash on Delivery Availability:</span>
               </div>
 
@@ -262,11 +262,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
                     setPincodeMsg(null);
                   }}
                   placeholder="Enter 6-digit PIN"
-                  className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-xs font-mono tracking-wider outline-none focus:border-teal-700"
+                  className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-xs font-mono tracking-wider outline-none focus:border-[#F57C00]"
                 />
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-semibold transition-colors cursor-pointer shrink-0"
+                  className="px-4 py-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-semibold transition-colors cursor-pointer shrink-0"
                 >
                   Check
                 </button>
@@ -317,22 +317,22 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
               <div className="grid grid-cols-2 gap-3">
                 <button
                   onClick={() => addToCart(product, quantity)}
-                  className="py-3 px-4 bg-teal-50 hover:bg-teal-100 text-teal-950 border border-teal-300 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                  className="py-3 px-4 bg-orange-50 hover:bg-orange-100 text-[#E65100] border border-orange-200/90 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer"
                 >
-                  <ShoppingCart className="w-4 h-4 text-teal-700" />
+                  <ShoppingCart className="w-4 h-4 text-[#F57C00]" />
                   <span>Add to Cart</span>
                 </button>
 
                 <button
                   onClick={() => addToCart(product, quantity)}
-                  className="py-3 px-4 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-md"
+                  className="py-3 px-4 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-md"
                 >
                   <Zap className="w-4 h-4 fill-white" />
                   <span>Buy Now</span>
                 </button>
               </div>
 
-              {/* WhatsApp Order Button (Prompt #23) */}
+              {/* WhatsApp Order Button */}
               <button
                 onClick={() => sendWhatsAppOrder(product, quantity)}
                 className="w-full py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-xs"
@@ -344,15 +344,15 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
               {/* Ask Gemini AI About This Device */}
               <button
                 onClick={() => setActiveView('ai-hub')}
-                className="w-full py-2.5 px-3 bg-gradient-to-r from-teal-50 to-sky-50 hover:from-teal-100 hover:to-sky-100 text-teal-900 border border-teal-200 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                className="w-full py-2.5 px-3 bg-gradient-to-r from-orange-50 to-amber-50 hover:from-orange-100 hover:to-amber-100 text-[#E65100] border border-orange-200/80 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer"
               >
-                <Sparkles className="w-3.5 h-3.5 text-teal-600 animate-pulse" />
+                <Sparkles className="w-3.5 h-3.5 text-[#F57C00] animate-pulse" />
                 <span>Ask AI Health Assistant About {product.name}</span>
               </button>
 
               <button
                 onClick={() => addToCompare(product)}
-                className="w-full py-2 text-xs font-medium text-slate-600 hover:text-teal-800 flex items-center justify-center gap-1.5 cursor-pointer"
+                className="w-full py-2 text-xs font-medium text-slate-600 hover:text-[#E65100] flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <Scale className="w-3.5 h-3.5" />
                 <span>{isCompared ? 'Already in Comparison List' : 'Compare with Other Devices'}</span>
@@ -368,8 +368,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
               onClick={() => setActiveTab('specs')}
               className={`px-4 py-2 text-xs font-bold rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
                 activeTab === 'specs'
-                  ? 'bg-teal-800 text-white'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#0F172A] hover:bg-orange-50/50'
               }`}
             >
               Specifications & Features
@@ -378,8 +378,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
               onClick={() => setActiveTab('howToUse')}
               className={`px-4 py-2 text-xs font-bold rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
                 activeTab === 'howToUse'
-                  ? 'bg-teal-800 text-white'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#0F172A] hover:bg-orange-50/50'
               }`}
             >
               How to Use at Home
@@ -388,8 +388,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
               onClick={() => setActiveTab('warranty')}
               className={`px-4 py-2 text-xs font-bold rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
                 activeTab === 'warranty'
-                  ? 'bg-teal-800 text-white'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#0F172A] hover:bg-orange-50/50'
               }`}
             >
               Warranty & Shipping Policy
@@ -398,8 +398,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
               onClick={() => setActiveTab('reviews')}
               className={`px-4 py-2 text-xs font-bold rounded-lg transition-colors cursor-pointer whitespace-nowrap ${
                 activeTab === 'reviews'
-                  ? 'bg-teal-800 text-white'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  ? 'bg-[#F57C00] text-white shadow-xs'
+                  : 'text-slate-600 hover:text-[#0F172A] hover:bg-orange-50/50'
               }`}
             >
               Customer Reviews ({product.reviewCount})
@@ -463,7 +463,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
                   <ol className="space-y-3 text-xs text-slate-700">
                     {product.howToUseSteps.map((step, idx) => (
                       <li key={idx} className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200">
-                        <span className="w-6 h-6 rounded-full bg-teal-800 text-white font-bold flex items-center justify-center shrink-0 text-xs">
+                        <span className="w-6 h-6 rounded-full bg-[#F57C00] text-white font-bold flex items-center justify-center shrink-0 text-xs">
                           {idx + 1}
                         </span>
                         <span className="pt-0.5 leading-relaxed">{step}</span>
@@ -476,7 +476,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product })
                   </p>
                 )}
 
-                <div className="p-4 bg-teal-50 rounded-xl border border-teal-200 text-xs text-teal-900 mt-4">
+                <div className="p-4 bg-orange-50 rounded-xl border border-orange-200 text-xs text-[#E65100] mt-4">
                   <strong>Need hands-on help?</strong> Our Azamgarh clinical technicians are available on WhatsApp (+91 94520 89211) to walk you through first-time operation.
                 </div>
               </div>

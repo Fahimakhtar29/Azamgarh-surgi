@@ -15,12 +15,12 @@ export const ProductComparePage: React.FC = () => {
 
   if (compareList.length === 0) {
     return (
-      <div className="bg-slate-50 min-h-screen py-16 text-center">
+      <div className="bg-white min-h-screen py-16 text-center">
         <div className="max-w-md mx-auto px-4 space-y-4">
-          <div className="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto">
+          <div className="w-16 h-16 rounded-full bg-orange-50 text-[#F57C00] flex items-center justify-center mx-auto">
             <Scale className="w-8 h-8" />
           </div>
-          <h2 className="text-xl font-bold text-slate-900 font-display">
+          <h2 className="text-xl font-bold text-[#0F172A] font-display">
             No Products in Comparison
           </h2>
           <p className="text-xs text-slate-500 leading-relaxed">
@@ -28,7 +28,7 @@ export const ProductComparePage: React.FC = () => {
           </p>
           <button
             onClick={() => setActiveView('category')}
-            className="px-5 py-2.5 bg-teal-800 text-white rounded-lg text-xs font-bold transition-colors cursor-pointer"
+            className="px-5 py-2.5 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-bold transition-colors cursor-pointer"
           >
             Browse Medical Devices
           </button>
@@ -51,15 +51,15 @@ export const ProductComparePage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-slate-50 min-h-screen py-10">
+    <div className="bg-white min-h-screen py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-3">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-800 uppercase tracking-wider">
-              <Scale className="w-3.5 h-3.5 text-teal-700" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E65100] uppercase tracking-wider">
+              <Scale className="w-3.5 h-3.5 text-[#F57C00]" />
               <span>Side-by-Side Diagnostic Evaluation</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display mt-1">
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#0F172A] font-display mt-1">
               Compare Medical Devices ({compareList.length}/4)
             </h1>
           </div>
@@ -68,7 +68,7 @@ export const ProductComparePage: React.FC = () => {
             {compareList.length < 4 && (
               <button
                 onClick={() => setActiveView('category')}
-                className="px-3.5 py-2 bg-teal-50 hover:bg-teal-100 text-teal-900 rounded-lg text-xs font-semibold flex items-center gap-1 cursor-pointer transition-colors"
+                className="px-3.5 py-2 bg-orange-50 hover:bg-orange-100 text-[#E65100] border border-orange-200 rounded-lg text-xs font-semibold flex items-center gap-1 cursor-pointer transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 <span>Add More Devices</span>
@@ -111,12 +111,12 @@ export const ProductComparePage: React.FC = () => {
                       />
                     </div>
 
-                    <span className="text-[10px] font-bold text-teal-800 uppercase tracking-wider block">
+                    <span className="text-[10px] font-bold text-[#E65100] uppercase tracking-wider block">
                       {product.brand}
                     </span>
                     <h3
                       onClick={() => viewProduct(product)}
-                      className="text-xs font-bold text-slate-900 line-clamp-2 hover:text-teal-900 cursor-pointer leading-snug"
+                      className="text-xs font-bold text-[#0F172A] line-clamp-2 hover:text-[#F57C00] cursor-pointer leading-snug"
                     >
                       {product.name}
                     </h3>
@@ -128,7 +128,7 @@ export const ProductComparePage: React.FC = () => {
                     </div>
 
                     <div className="mt-2 flex items-baseline gap-1.5">
-                      <span className="text-base font-bold text-slate-900 font-mono">
+                      <span className="text-base font-bold text-[#0F172A] font-mono">
                         ₹{product.sellingPrice.toLocaleString('en-IN')}
                       </span>
                       <span className="text-xs text-slate-400 line-through font-mono">
@@ -138,7 +138,7 @@ export const ProductComparePage: React.FC = () => {
 
                     <button
                       onClick={() => addToCart(product, 1)}
-                      className="mt-3 w-full py-2 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                      className="mt-3 w-full py-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <ShoppingCart className="w-3.5 h-3.5" />
                       <span>Add to Cart</span>

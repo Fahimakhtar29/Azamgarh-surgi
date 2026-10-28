@@ -60,8 +60,8 @@ export const CartDrawer: React.FC = () => {
         {/* Drawer Header */}
         <div className="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5 text-teal-800" />
-            <h2 className="text-base font-bold text-slate-900 font-display">
+            <ShoppingBag className="w-5 h-5 text-[#F57C00]" />
+            <h2 className="text-base font-bold text-[#0F172A] font-display">
               Shopping Cart ({cart.reduce((a, b) => a + b.quantity, 0)} items)
             </h2>
           </div>
@@ -74,7 +74,7 @@ export const CartDrawer: React.FC = () => {
         </div>
 
         {/* Free Shipping Progress Indicator */}
-        <div className="px-5 py-2.5 bg-slate-50 border-b border-slate-100 text-xs">
+        <div className="px-5 py-2.5 bg-orange-50/50 border-b border-orange-100/80 text-xs">
           {cartSubtotal >= brandConfig.freeShippingThreshold ? (
             <div className="flex items-center gap-1.5 text-emerald-700 font-semibold">
               <Check className="w-4 h-4 text-emerald-600" />
@@ -84,14 +84,14 @@ export const CartDrawer: React.FC = () => {
             <div>
               <span className="text-slate-600">
                 Add items worth{' '}
-                <strong className="text-slate-900 font-mono">
+                <strong className="text-[#0F172A] font-mono">
                   ₹{(brandConfig.freeShippingThreshold - cartSubtotal).toLocaleString('en-IN')}
                 </strong>{' '}
                 more for Free Delivery.
               </span>
               <div className="w-full bg-slate-200 h-1.5 rounded-full mt-1.5 overflow-hidden">
                 <div
-                  className="bg-teal-700 h-full rounded-full transition-all"
+                  className="bg-[#F57C00] h-full rounded-full transition-all"
                   style={{
                     width: `${Math.min(
                       100,
@@ -123,14 +123,14 @@ export const CartDrawer: React.FC = () => {
 
                 <div className="flex-1 flex flex-col justify-between">
                   <div>
-                    <span className="text-[10px] font-bold text-teal-800 uppercase tracking-wider block">
+                    <span className="text-[10px] font-bold text-[#E65100] uppercase tracking-wider block">
                       {item.product.brand}
                     </span>
-                    <h3 className="text-xs font-semibold text-slate-900 line-clamp-1 leading-snug">
+                    <h3 className="text-xs font-semibold text-[#0F172A] line-clamp-1 leading-snug">
                       {item.product.name}
                     </h3>
                     <div className="flex items-baseline gap-2 mt-1">
-                      <span className="text-sm font-bold text-slate-900 font-mono tabular-nums">
+                      <span className="text-sm font-bold text-[#0F172A] font-mono tabular-nums">
                         ₹{(item.product.sellingPrice * item.quantity).toLocaleString('en-IN')}
                       </span>
                       {item.product.mrp > item.product.sellingPrice && (
@@ -168,7 +168,7 @@ export const CartDrawer: React.FC = () => {
                     <div className="flex items-center gap-2 text-xs text-slate-500">
                       <button
                         onClick={() => saveForLater(item.product.id)}
-                        className="hover:text-teal-800 flex items-center gap-0.5 cursor-pointer text-[11px]"
+                        className="hover:text-[#F57C00] flex items-center gap-0.5 cursor-pointer text-[11px]"
                         title="Save for Later"
                       >
                         <Bookmark className="w-3 h-3" />
@@ -190,7 +190,7 @@ export const CartDrawer: React.FC = () => {
           ) : (
             <div className="text-center py-12 space-y-3">
               <ShoppingBag className="w-12 h-12 text-slate-300 mx-auto" />
-              <h3 className="text-sm font-bold text-slate-700">Your Cart is Empty</h3>
+              <h3 className="text-sm font-bold text-[#0F172A]">Your Cart is Empty</h3>
               <p className="text-xs text-slate-400 max-w-xs mx-auto">
                 Explore blood pressure monitors, glucometers, and healthcare essentials.
               </p>
@@ -199,7 +199,7 @@ export const CartDrawer: React.FC = () => {
                   setIsCartDrawerOpen(false);
                   setActiveView('category');
                 }}
-                className="mt-2 px-4 py-2 bg-teal-800 text-white rounded-lg text-xs font-semibold"
+                className="mt-2 px-4 py-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-semibold transition-colors cursor-pointer"
               >
                 Start Shopping
               </button>
@@ -209,7 +209,7 @@ export const CartDrawer: React.FC = () => {
           {/* Saved for Later Section */}
           {savedForLater.length > 0 && (
             <div className="pt-4 border-t border-slate-200">
-              <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+              <h4 className="text-xs font-bold text-[#0F172A] uppercase tracking-wider mb-2">
                 Saved for Later ({savedForLater.length})
               </h4>
               <div className="space-y-2">
@@ -222,14 +222,14 @@ export const CartDrawer: React.FC = () => {
                       <span className="font-semibold text-slate-800 truncate block">
                         {saved.product.name}
                       </span>
-                      <span className="font-mono text-slate-600 font-bold">
+                      <span className="font-mono text-[#E65100] font-bold">
                         ₹{saved.product.sellingPrice.toLocaleString('en-IN')}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <button
                         onClick={() => moveToCartFromSaved(saved.product.id)}
-                        className="text-teal-800 font-bold hover:underline"
+                        className="text-[#F57C00] font-bold hover:underline"
                       >
                         Move to Cart
                       </button>
@@ -249,7 +249,7 @@ export const CartDrawer: React.FC = () => {
 
         {/* Drawer Footer: Coupons & Totals */}
         {cart.length > 0 && (
-          <div className="p-4 sm:p-5 border-t border-slate-200 bg-slate-50/80 space-y-3.5">
+          <div className="p-4 sm:p-5 border-t border-slate-200 bg-orange-50/20 space-y-3.5">
             {/* Coupon Code Input */}
             <form onSubmit={handleApplyCoupon} className="space-y-1.5">
               <div className="flex gap-2">
@@ -261,11 +261,11 @@ export const CartDrawer: React.FC = () => {
                     setCouponMsg(null);
                   }}
                   placeholder="Coupon code (e.g. WELCOME10, MEDI50)"
-                  className="flex-1 px-3 py-1.5 bg-white border border-slate-300 rounded-lg text-xs uppercase font-mono tracking-wider outline-none focus:border-teal-700"
+                  className="flex-1 px-3 py-1.5 bg-white border border-slate-300 rounded-lg text-xs uppercase font-mono tracking-wider outline-none focus:border-[#F57C00]"
                 />
                 <button
                   type="submit"
-                  className="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-semibold cursor-pointer"
+                  className="px-3 py-1.5 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-semibold cursor-pointer transition-colors"
                 >
                   Apply
                 </button>
@@ -329,9 +329,9 @@ export const CartDrawer: React.FC = () => {
                   )}
                 </span>
               </div>
-              <div className="flex justify-between text-sm font-bold text-slate-900 pt-2 border-t border-slate-200">
+              <div className="flex justify-between text-sm font-bold text-[#0F172A] pt-2 border-t border-slate-200">
                 <span>Total Amount:</span>
-                <span className="font-mono text-base text-teal-900">
+                <span className="font-mono text-base text-[#E65100]">
                   ₹{cartTotal.toLocaleString('en-IN')}
                 </span>
               </div>
@@ -340,7 +340,7 @@ export const CartDrawer: React.FC = () => {
             {/* Primary Checkout Button */}
             <button
               onClick={handleCheckout}
-              className="w-full py-3 bg-teal-800 hover:bg-teal-900 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-md"
+              className="w-full py-3 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-md"
             >
               <span>Proceed to Checkout</span>
               <ArrowRight className="w-4 h-4" />

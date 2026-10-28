@@ -55,13 +55,13 @@ export const OrderTrackingPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen py-10">
+    <div className="bg-white min-h-screen py-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-8">
-          <span className="text-xs font-bold text-teal-800 uppercase tracking-wider">
+          <span className="text-xs font-bold text-[#E65100] uppercase tracking-wider">
             Live Consignment Status
           </span>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display mt-1">
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#0F172A] font-display mt-1">
             Track Your Healthcare Order
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -85,7 +85,7 @@ export const OrderTrackingPage: React.FC = () => {
                     setErrorMsg('');
                   }}
                   placeholder="e.g. AMS-90421"
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-xs font-mono font-bold outline-none focus:border-teal-700 uppercase"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-xs font-mono font-bold outline-none focus:border-[#F57C00] uppercase"
                 />
               </div>
 
@@ -98,7 +98,7 @@ export const OrderTrackingPage: React.FC = () => {
                   value={phoneInput}
                   onChange={(e) => setPhoneInput(e.target.value)}
                   placeholder="10-digit mobile number"
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-xs font-mono outline-none focus:border-teal-700"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-xs font-mono outline-none focus:border-[#F57C00]"
                 />
               </div>
             </div>
@@ -113,7 +113,7 @@ export const OrderTrackingPage: React.FC = () => {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="px-6 py-2.5 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm"
+                className="px-6 py-2.5 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-bold transition-colors flex items-center gap-1.5 cursor-pointer shadow-sm"
               >
                 <Search className="w-4 h-4" />
                 <span>Track Consignment</span>
@@ -128,11 +128,11 @@ export const OrderTrackingPage: React.FC = () => {
             {/* Top Info Banner */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-100 gap-4">
               <div>
-                <span className="text-xs font-bold text-teal-800 uppercase tracking-wider">
+                <span className="text-xs font-bold text-[#E65100] uppercase tracking-wider">
                   Order Reference: {searchedOrder.orderNumber}
                 </span>
-                <h2 className="text-xl font-bold text-slate-900 mt-0.5">
-                  Status: <span className="text-teal-700">{searchedOrder.status}</span>
+                <h2 className="text-xl font-bold text-[#0F172A] mt-0.5">
+                  Status: <span className="text-[#F57C00]">{searchedOrder.status}</span>
                 </h2>
                 <p className="text-xs text-slate-500 mt-1">
                   Estimated Delivery:{' '}
@@ -161,7 +161,7 @@ export const OrderTrackingPage: React.FC = () => {
                 {/* Connecting track line */}
                 <div className="hidden sm:block absolute top-4 left-6 right-6 h-1 bg-slate-200 -z-0">
                   <div
-                    className="h-full bg-teal-700 transition-all duration-500"
+                    className="h-full bg-[#F57C00] transition-all duration-500"
                     style={{
                       width: `${(getStepIndex(searchedOrder.status) / (statusSteps.length - 1)) * 100}%`
                     }}
@@ -180,7 +180,7 @@ export const OrderTrackingPage: React.FC = () => {
                         <div
                           className={`w-8 h-8 rounded-full flex items-center justify-center font-mono text-xs font-bold mb-2 transition-all shadow-xs ${
                             isCurrent
-                              ? 'bg-teal-700 text-white ring-4 ring-teal-100 scale-110'
+                              ? 'bg-[#F57C00] text-white ring-4 ring-orange-100 scale-110'
                               : isCompleted
                               ? 'bg-emerald-600 text-white'
                               : 'bg-slate-200 text-slate-400'
@@ -191,9 +191,9 @@ export const OrderTrackingPage: React.FC = () => {
                         <span
                           className={`text-xs font-semibold leading-tight ${
                             isCurrent
-                              ? 'text-teal-900 font-bold'
+                              ? 'text-[#0F172A] font-bold'
                               : isCompleted
-                              ? 'text-slate-900'
+                              ? 'text-[#0F172A]'
                               : 'text-slate-400'
                           }`}
                         >
@@ -208,7 +208,7 @@ export const OrderTrackingPage: React.FC = () => {
 
             {/* Detailed Timeline Events */}
             <div className="pt-6 border-t border-slate-100">
-              <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-4">
+              <h3 className="text-xs font-bold text-[#0F172A] uppercase tracking-wider mb-4">
                 Activity Log
               </h3>
               <div className="space-y-3">
@@ -217,10 +217,10 @@ export const OrderTrackingPage: React.FC = () => {
                     key={idx}
                     className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs"
                   >
-                    <Clock className="w-4 h-4 text-teal-700 shrink-0 mt-0.5" />
+                    <Clock className="w-4 h-4 text-[#F57C00] shrink-0 mt-0.5" />
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
-                        <span className="font-bold text-slate-900">{item.status}</span>
+                        <span className="font-bold text-[#0F172A]">{item.status}</span>
                         <span className="text-slate-400 font-mono text-[11px]">{item.timestamp}</span>
                       </div>
                       <p className="text-slate-600 mt-0.5">{item.description}</p>
@@ -232,7 +232,7 @@ export const OrderTrackingPage: React.FC = () => {
 
             {/* Items in this consignment */}
             <div className="pt-6 border-t border-slate-100">
-              <h3 className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-4">
+              <h3 className="text-xs font-bold text-[#0F172A] uppercase tracking-wider mb-4">
                 Consignment Items ({searchedOrder.items.length})
               </h3>
               <div className="space-y-3">
@@ -249,15 +249,15 @@ export const OrderTrackingPage: React.FC = () => {
                       />
                     </div>
                     <div className="flex-1 truncate">
-                      <span className="font-bold text-teal-800 uppercase text-[10px] block">
+                      <span className="font-bold text-[#E65100] uppercase text-[10px] block">
                         {item.brand}
                       </span>
-                      <span className="font-semibold text-slate-900 truncate block">
+                      <span className="font-semibold text-[#0F172A] truncate block">
                         {item.productName}
                       </span>
                       <span className="text-slate-500">Qty: {item.quantity}</span>
                     </div>
-                    <span className="font-mono font-bold text-slate-900 text-sm">
+                    <span className="font-mono font-bold text-[#0F172A] text-sm">
                       ₹{(item.price * item.quantity).toLocaleString('en-IN')}
                     </span>
                   </div>
@@ -266,12 +266,12 @@ export const OrderTrackingPage: React.FC = () => {
             </div>
 
             {/* Support helpline footer */}
-            <div className="p-4 bg-teal-50 rounded-xl border border-teal-200 text-xs text-teal-900 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="p-4 bg-orange-50 rounded-xl border border-orange-200 text-xs text-[#E65100] flex flex-col sm:flex-row items-center justify-between gap-3">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-teal-700 shrink-0" />
+                <Phone className="w-4 h-4 text-[#F57C00] shrink-0" />
                 <span>
                   Questions about your consignment delivery? Contact Azamgarh logistics desk at{' '}
-                  <strong>+91 94520 89211</strong>.
+                  <strong className="text-[#0F172A]">+91 94520 89211</strong>.
                 </span>
               </div>
             </div>

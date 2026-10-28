@@ -160,10 +160,10 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
   return (
     <div className={`flex flex-col h-full bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden ${compact ? 'max-h-[600px]' : 'min-h-[620px]'}`}>
       {/* Top Header */}
-      <div className="bg-gradient-to-r from-teal-900 via-teal-800 to-slate-900 text-white p-4">
+      <div className="bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0A192F] text-white p-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-600/30 border border-teal-400/40 flex items-center justify-center text-teal-300">
+            <div className="w-10 h-10 rounded-xl bg-[#F57C00]/20 border border-orange-400/40 flex items-center justify-center text-[#F57C00]">
               <Bot className="w-5 h-5" />
             </div>
             <div>
@@ -174,7 +174,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
                   Active
                 </span>
               </div>
-              <p className="text-xs text-teal-200/80">Azamgarh Medical & Surgical • Multi-Turn AI</p>
+              <p className="text-xs text-orange-200/80">Azamgarh Medical & Surgical • Multi-Turn AI</p>
             </div>
           </div>
 
@@ -189,14 +189,14 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
         </div>
 
         {/* Model Role Selector */}
-        <div className="mt-3 pt-3 border-t border-teal-700/50">
-          <div className="flex items-center justify-between text-xs text-teal-200 mb-1.5">
+        <div className="mt-3 pt-3 border-t border-slate-700/60">
+          <div className="flex items-center justify-between text-xs text-slate-300 mb-1.5">
             <span className="font-medium">Specialist Role & Model:</span>
-            <span className="text-[11px] text-teal-300/80">
+            <span className="text-[11px] text-[#F57C00] font-mono">
               {role === 'complex' ? 'gemini-3.1-pro-preview' : role === 'fast' ? 'gemini-3.1-flash-lite' : 'gemini-3.5-flash'}
             </span>
           </div>
-          <div className="grid grid-cols-3 gap-1.5 bg-black/20 p-1 rounded-xl">
+          <div className="grid grid-cols-3 gap-1.5 bg-black/30 p-1 rounded-xl">
             <button
               type="button"
               onClick={() => setRole('fast')}
@@ -215,7 +215,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
               onClick={() => setRole('general')}
               className={`flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-medium transition-all ${
                 role === 'general'
-                  ? 'bg-teal-500 text-slate-950 shadow-sm font-semibold'
+                  ? 'bg-[#F57C00] text-white shadow-sm font-semibold'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
@@ -228,7 +228,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
               onClick={() => setRole('complex')}
               className={`flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg text-xs font-medium transition-all ${
                 role === 'complex'
-                  ? 'bg-indigo-500 text-white shadow-sm font-semibold'
+                  ? 'bg-indigo-600 text-white shadow-sm font-semibold'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
@@ -246,19 +246,19 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
           return (
             <div key={msg.id} className={`flex gap-3 ${isUser ? 'justify-end' : 'justify-start'}`}>
               {!isUser && (
-                <div className="w-8 h-8 rounded-full bg-teal-800 text-white flex-shrink-0 flex items-center justify-center mt-0.5 shadow-sm">
+                <div className="w-8 h-8 rounded-full bg-[#0F172A] text-[#F57C00] flex-shrink-0 flex items-center justify-center mt-0.5 shadow-sm">
                   <Bot className="w-4 h-4" />
                 </div>
               )}
 
               <div className={`max-w-[85%] sm:max-w-[78%] rounded-2xl p-3.5 ${
                 isUser
-                  ? 'bg-teal-700 text-white rounded-tr-sm shadow-sm'
+                  ? 'bg-[#F57C00] text-white rounded-tr-sm shadow-sm'
                   : 'bg-white border border-slate-200 text-slate-800 rounded-tl-sm shadow-sm'
               }`}>
                 {/* Message Header */}
                 <div className="flex items-center justify-between gap-3 text-[11px] mb-1.5 pb-1 border-b border-black/5">
-                  <span className={`font-semibold ${isUser ? 'text-teal-100' : 'text-teal-900'}`}>
+                  <span className={`font-semibold ${isUser ? 'text-orange-100' : 'text-[#0F172A]'}`}>
                     {isUser ? 'You' : 'Azamgarh Medical AI'}
                   </span>
                   <div className="flex items-center gap-2">
@@ -267,7 +267,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
                         {msg.modelUsed}
                       </span>
                     )}
-                    <span className={isUser ? 'text-teal-200' : 'text-slate-600'}>
+                    <span className={isUser ? 'text-orange-100' : 'text-slate-600'}>
                       {msg.timestamp}
                     </span>
                   </div>
@@ -284,7 +284,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
                     <span className="text-[11px]">Home health guidance only</span>
                     <button
                       onClick={() => handleCopy(msg.id, msg.content)}
-                      className="inline-flex items-center gap-1 hover:text-teal-700 transition-colors p-1"
+                      className="inline-flex items-center gap-1 hover:text-[#E65100] transition-colors p-1"
                       title="Copy response"
                     >
                       {copiedId === msg.id ? (
@@ -314,13 +314,13 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
 
         {loading && (
           <div className="flex gap-3 justify-start">
-            <div className="w-8 h-8 rounded-full bg-teal-800 text-white flex-shrink-0 flex items-center justify-center mt-0.5">
+            <div className="w-8 h-8 rounded-full bg-[#0F172A] text-[#F57C00] flex-shrink-0 flex items-center justify-center mt-0.5">
               <Bot className="w-4 h-4" />
             </div>
             <div className="bg-white border border-slate-200 rounded-2xl rounded-tl-sm p-4 shadow-sm flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-teal-600 animate-bounce"></div>
-              <div className="w-2 h-2 rounded-full bg-teal-600 animate-bounce [animation-delay:0.2s]"></div>
-              <div className="w-2 h-2 rounded-full bg-teal-600 animate-bounce [animation-delay:0.4s]"></div>
+              <div className="w-2 h-2 rounded-full bg-[#F57C00] animate-bounce"></div>
+              <div className="w-2 h-2 rounded-full bg-[#F57C00] animate-bounce [animation-delay:0.2s]"></div>
+              <div className="w-2 h-2 rounded-full bg-[#F57C00] animate-bounce [animation-delay:0.4s]"></div>
               <span className="text-xs text-slate-600 ml-2 font-medium">
                 {role === 'complex'
                   ? 'Analyzing clinical parameters with Gemini Pro...'
@@ -339,7 +339,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
       {messages.length <= 3 && !loading && (
         <div className="px-4 py-2 bg-slate-100/70 border-t border-slate-200">
           <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1.5 flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-teal-600" />
+            <Sparkles className="w-3 h-3 text-[#F57C00]" />
             Quick Consultation Prompts:
           </p>
           <div className="flex flex-wrap gap-1.5">
@@ -348,7 +348,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
                 key={i}
                 type="button"
                 onClick={() => handleSend(q)}
-                className="text-xs bg-white hover:bg-teal-50 hover:text-teal-700 hover:border-teal-300 text-slate-700 px-2.5 py-1 rounded-full border border-slate-200 transition-all text-left shadow-2xs"
+                className="text-xs bg-white hover:bg-orange-50 hover:text-[#E65100] hover:border-orange-300 text-slate-700 px-2.5 py-1 rounded-full border border-slate-200 transition-all text-left shadow-2xs"
               >
                 {q}
               </button>
@@ -385,14 +385,14 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
                   ? 'quick medical device question...'
                   : 'about BP monitors, glucometers, nebulizers...'
               }`}
-              className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 pr-8 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white resize-none max-h-24 transition-all"
+              className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 pr-8 focus:outline-none focus:ring-2 focus:ring-[#F57C00] focus:border-[#F57C00] focus:bg-white resize-none max-h-24 transition-all"
             />
           </div>
 
           <button
             type="submit"
             disabled={!input.trim() || loading}
-            className="p-2.5 bg-teal-800 hover:bg-teal-900 disabled:bg-slate-300 text-white rounded-xl transition-all shadow-sm flex-shrink-0 disabled:cursor-not-allowed"
+            className="p-2.5 bg-[#F57C00] hover:bg-[#E65100] disabled:bg-slate-300 text-white rounded-xl transition-all shadow-sm flex-shrink-0 disabled:cursor-not-allowed"
             title="Send Message"
           >
             <Send className="w-4 h-4" />
@@ -401,7 +401,7 @@ export const GeminiHealthcareChat: React.FC<GeminiHealthcareChatProps> = ({
 
         <div className="flex items-center justify-between text-[11px] text-slate-600 mt-2 px-1">
           <span className="flex items-center gap-1">
-            <ShieldCheck className="w-3.5 h-3.5 text-teal-600" />
+            <ShieldCheck className="w-3.5 h-3.5 text-[#F57C00]" />
             Azamgarh Medical Verified Knowledge Base
           </span>
           <span className="hidden sm:inline">Press Enter to send</span>

@@ -43,7 +43,7 @@ const AppContent: React.FC = () => {
   const { activeView, selectedProduct, products } = useStore();
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans selection:bg-teal-600 selection:text-white pb-16 lg:pb-0">
+    <div className="min-h-screen flex flex-col bg-white text-slate-800 font-sans selection:bg-[#F57C00] selection:text-white pb-16 lg:pb-0">
       {/* 1. Announcement Bar */}
       <AnnouncementBar />
 

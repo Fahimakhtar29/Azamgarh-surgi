@@ -12,15 +12,15 @@ export const RespiratoryCareSection: React.FC = () => {
   ).slice(0, 4);
 
   return (
-    <section className="py-14 bg-white border-b border-slate-200">
+    <section className="py-14 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-2">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-cyan-800">
-              <Wind className="w-3.5 h-3.5 text-cyan-600" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E65100]">
+              <Wind className="w-3.5 h-3.5 text-[#F57C00]" />
               <span>Pulmonary Health</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display mt-1">
               Respiratory & Inhalation Care
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -30,7 +30,7 @@ export const RespiratoryCareSection: React.FC = () => {
 
           <button
             onClick={() => viewCategory('nebulizers')}
-            className="text-xs font-semibold text-teal-800 hover:text-teal-900 flex items-center gap-1 cursor-pointer shrink-0"
+            className="text-xs font-semibold text-[#F57C00] hover:text-[#E65100] flex items-center gap-1 cursor-pointer shrink-0"
           >
             <span>View All Nebulizers</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -39,33 +39,33 @@ export const RespiratoryCareSection: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10">
           {/* Spotlight banner */}
-          <div className="lg:col-span-4 bg-gradient-to-br from-cyan-900 to-teal-950 rounded-2xl p-6 text-white space-y-4">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-300">
+          <div className="lg:col-span-4 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0A192F] rounded-2xl p-6 text-white space-y-4 border border-slate-700 shadow-md">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#F57C00]">
               Seasonal Smog & Allergy Relief
             </span>
             <h3 className="text-xl font-bold font-display leading-snug">
               Breathe Freely with Fast Medication Delivery
             </h3>
-            <p className="text-xs text-cyan-100 leading-relaxed">
+            <p className="text-xs text-slate-300 leading-relaxed">
               Our clinical compressor nebulizers turn prescribed liquid medication into aerosol droplets smaller than 3.0 microns, delivering relief deep into the bronchial tree.
             </p>
-            <div className="space-y-1.5 text-xs text-cyan-200 pt-1">
+            <div className="space-y-1.5 text-xs text-slate-300 pt-1">
               <div className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-cyan-400" />
+                <Check className="w-3.5 h-3.5 text-[#F57C00]" />
                 <span>Pediatric & adult masks in every box</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-cyan-400" />
+                <Check className="w-3.5 h-3.5 text-[#F57C00]" />
                 <span>Whisper-quiet models for sleeping babies</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-cyan-400" />
+                <Check className="w-3.5 h-3.5 text-[#F57C00]" />
                 <span>Universal tubes and spare air filters</span>
               </div>
             </div>
             <button
               onClick={() => viewCategory('nebulizers')}
-              className="mt-2 w-full py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg text-xs font-bold transition-colors cursor-pointer"
+              className="mt-2 w-full py-2.5 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-bold transition-colors cursor-pointer shadow-xs"
             >
               Explore Nebulizer Machines
             </button>

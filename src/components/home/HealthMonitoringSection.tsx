@@ -62,13 +62,13 @@ export const HealthMonitoringSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-14 bg-white border-b border-slate-200">
+    <section className="py-14 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-800">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#E65100]">
             Vital Sign Diagnostics
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display mt-1">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display mt-1">
             Monitor Your Health at Home
           </h2>
           <p className="text-sm text-slate-600 mt-2">
@@ -82,7 +82,7 @@ export const HealthMonitoringSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:border-teal-600 hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
+                className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden hover:border-[#F57C00]/60 hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
                   {/* Photo with metric tag */}
@@ -96,7 +96,7 @@ export const HealthMonitoringSection: React.FC = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
                     <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-xs">
                       <span className="font-bold flex items-center gap-1">
-                        <Icon className="w-3.5 h-3.5 text-teal-300" />
+                        <Icon className="w-3.5 h-3.5 text-orange-400" />
                         {item.title}
                       </span>
                       <span className="text-[10px] bg-slate-900/80 px-2 py-0.5 rounded font-mono">
@@ -107,7 +107,7 @@ export const HealthMonitoringSection: React.FC = () => {
 
                   {/* Body description */}
                   <div className="p-4">
-                    <span className="text-[11px] font-semibold text-teal-800 uppercase tracking-wider">
+                    <span className="text-[11px] font-semibold text-[#E65100] uppercase tracking-wider">
                       {item.subtitle}
                     </span>
                     <p className="text-xs text-slate-600 mt-1 leading-relaxed">
@@ -120,7 +120,7 @@ export const HealthMonitoringSection: React.FC = () => {
                 <div className="p-4 pt-0">
                   <button
                     onClick={() => viewCategory(item.category)}
-                    className="w-full py-2 bg-white hover:bg-teal-700 hover:text-white text-teal-800 border border-teal-300 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                    className="w-full py-2 bg-orange-50 hover:bg-[#F57C00] text-[#E65100] hover:text-white border border-orange-200 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                   >
                     <span>Shop {item.title}</span>
                     <ArrowRight className="w-3.5 h-3.5" />

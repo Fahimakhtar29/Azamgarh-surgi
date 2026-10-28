@@ -120,7 +120,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-slate-700 hover:text-teal-700 rounded-lg hover:bg-slate-100 transition-colors"
+              className="lg:hidden p-2 text-slate-700 hover:text-[#F57C00] rounded-lg hover:bg-orange-50 transition-colors"
               aria-label="Toggle navigation menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -133,11 +133,11 @@ export const Header: React.FC = () => {
               }}
               className="flex items-center gap-2.5 text-left group cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-lg bg-teal-800 text-white flex items-center justify-center shadow-xs group-hover:bg-teal-900 transition-colors">
-                <Stethoscope className="w-6 h-6 text-teal-200" />
+              <div className="w-10 h-10 rounded-lg bg-[#F57C00] text-white flex items-center justify-center shadow-xs group-hover:bg-[#E65100] transition-colors">
+                <Stethoscope className="w-6 h-6 text-white" />
               </div>
               <div>
-                <span className="block text-base sm:text-lg font-bold tracking-tight text-teal-950 font-display uppercase leading-tight">
+                <span className="block text-base sm:text-lg font-bold tracking-tight text-[#0F172A] font-display uppercase leading-tight">
                   {brandConfig.brandName}
                 </span>
                 <span className="block text-[11px] font-medium text-slate-500 tracking-wide">
@@ -157,7 +157,7 @@ export const Header: React.FC = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setIsSearchFocused(true)}
                   placeholder="Search medicines, devices, brands & healthcare products..."
-                  className="w-full pl-10 pr-24 py-2.5 text-sm bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-300 focus:border-teal-700 rounded-lg outline-none transition-all placeholder:text-slate-400"
+                  className="w-full pl-10 pr-24 py-2.5 text-sm bg-slate-50 hover:bg-white focus:bg-white border border-slate-300 focus:border-[#F57C00] focus:ring-1 focus:ring-orange-200 rounded-lg outline-none transition-all placeholder:text-slate-400"
                 />
                 <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3" />
                 {searchQuery && (
@@ -171,7 +171,7 @@ export const Header: React.FC = () => {
                 )}
                 <button
                   type="submit"
-                  className="absolute right-1.5 top-1.5 px-3.5 py-1.5 bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold rounded-md transition-colors cursor-pointer"
+                  className="absolute right-1.5 top-1.5 px-3.5 py-1.5 bg-[#F57C00] hover:bg-[#E65100] text-white text-xs font-semibold rounded-md transition-colors cursor-pointer shadow-2xs"
                 >
                   Search
                 </button>
@@ -200,15 +200,15 @@ export const Header: React.FC = () => {
                             viewProduct(item.target);
                           }
                         }}
-                        className="w-full text-left px-4 py-2.5 hover:bg-slate-50 flex items-center justify-between group transition-colors cursor-pointer text-sm"
+                        className="w-full text-left px-4 py-2.5 hover:bg-orange-50/60 flex items-center justify-between group transition-colors cursor-pointer text-sm"
                       >
                         <div className="flex items-center gap-2.5">
                           {item.type === 'product' ? (
-                            <Stethoscope className="w-4 h-4 text-teal-600 shrink-0" />
+                            <Stethoscope className="w-4 h-4 text-[#F57C00] shrink-0" />
                           ) : (
                             <Search className="w-4 h-4 text-slate-400 shrink-0" />
                           )}
-                          <span className="text-slate-800 group-hover:text-teal-800 font-medium">
+                          <span className="text-slate-800 group-hover:text-[#E65100] font-medium">
                             {item.label}
                           </span>
                         </div>
@@ -232,25 +232,25 @@ export const Header: React.FC = () => {
             {/* Location selector */}
             <button
               onClick={() => setIsPincodeModalOpen(true)}
-              className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-slate-100 text-left transition-colors cursor-pointer"
+              className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-orange-50 text-left transition-colors cursor-pointer"
               title="Change Delivery PIN Code"
             >
-              <MapPin className="w-4 h-4 text-teal-700 shrink-0" />
+              <MapPin className="w-4 h-4 text-[#F57C00] shrink-0" />
               <div className="text-xs leading-tight">
                 <span className="block text-slate-400 text-[10px]">Deliver to</span>
-                <span className="font-semibold text-slate-800">{currentPincode}</span>
+                <span className="font-semibold text-[#0F172A]">{currentPincode}</span>
               </div>
             </button>
 
             {/* Comparison */}
             <button
               onClick={() => setActiveView('compare')}
-              className="relative p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-700 hover:text-teal-800 cursor-pointer hidden sm:flex items-center"
+              className="relative p-2 rounded-lg hover:bg-orange-50 transition-colors text-slate-700 hover:text-[#F57C00] cursor-pointer hidden sm:flex items-center"
               title="Compare Products"
             >
               <Scale className="w-5 h-5" />
               {compareList.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-amber-500 text-white font-bold rounded-full w-4 h-4 text-[10px] flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-[#F57C00] text-white font-bold rounded-full w-4 h-4 text-[10px] flex items-center justify-center">
                   {compareList.length}
                 </span>
               )}
@@ -259,7 +259,7 @@ export const Header: React.FC = () => {
             {/* Wishlist */}
             <button
               onClick={() => setActiveView('account')}
-              className="relative p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-700 hover:text-teal-800 cursor-pointer hidden sm:flex items-center"
+              className="relative p-2 rounded-lg hover:bg-orange-50 transition-colors text-slate-700 hover:text-[#F57C00] cursor-pointer hidden sm:flex items-center"
               title="My Wishlist & Account"
             >
               <Heart className="w-5 h-5" />
@@ -273,7 +273,7 @@ export const Header: React.FC = () => {
             {/* Account */}
             <button
               onClick={() => setActiveView('account')}
-              className="flex items-center gap-1.5 p-2 rounded-lg hover:bg-slate-100 transition-colors text-slate-700 hover:text-teal-800 cursor-pointer"
+              className="flex items-center gap-1.5 p-2 rounded-lg hover:bg-orange-50 transition-colors text-slate-700 hover:text-[#F57C00] cursor-pointer"
               title="Customer Account"
             >
               <User className="w-5 h-5" />
@@ -285,19 +285,19 @@ export const Header: React.FC = () => {
               onClick={() => setActiveView('ai-hub')}
               className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border transition-all cursor-pointer text-xs font-semibold ${
                 activeView === 'ai-hub'
-                  ? 'bg-teal-900 text-teal-200 border-teal-700 shadow-xs'
-                  : 'bg-teal-50 text-teal-800 border-teal-200/80 hover:bg-teal-100 hover:text-teal-900'
+                  ? 'bg-[#E65100] text-white border-[#E65100] shadow-xs'
+                  : 'bg-orange-50 text-[#E65100] border-orange-200/90 hover:bg-orange-100 hover:text-[#E65100]'
               }`}
               title="Azamgarh AI Health Hub (Gemini Chat, Search & Maps Grounding, Image Studio)"
             >
-              <Sparkles className="w-3.5 h-3.5 text-teal-600 animate-pulse" />
+              <Sparkles className="w-3.5 h-3.5 text-[#F57C00] animate-pulse" />
               <span className="hidden md:inline">AI Health Hub</span>
             </button>
 
             {/* Cart Drawer Trigger */}
             <button
               onClick={() => setIsCartDrawerOpen(true)}
-              className="flex items-center gap-2 px-3 py-2 bg-teal-800 hover:bg-teal-900 text-white rounded-lg transition-colors cursor-pointer shadow-xs ml-1"
+              className="flex items-center gap-2 px-3 py-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg transition-colors cursor-pointer shadow-xs ml-1"
               aria-label="Shopping Cart"
             >
               <div className="relative">
@@ -321,12 +321,12 @@ export const Header: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search BP, glucometer, nebulizer..."
-              className="w-full pl-9 pr-14 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-teal-700"
+              className="w-full pl-9 pr-14 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg outline-none focus:border-[#F57C00]"
             />
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
             <button
               type="submit"
-              className="absolute right-1 top-1 px-2.5 py-1 bg-teal-700 text-white rounded text-[11px] font-medium"
+              className="absolute right-1 top-1 px-2.5 py-1 bg-[#F57C00] text-white rounded text-[11px] font-medium"
             >
               Search
             </button>
@@ -342,13 +342,13 @@ export const Header: React.FC = () => {
                   setActiveView('ai-hub');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2.5 bg-teal-900 text-teal-200 font-bold rounded-lg text-left col-span-2 flex items-center justify-between"
+                className="p-2.5 bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold rounded-lg text-left col-span-2 flex items-center justify-between"
               >
                 <span className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-teal-400 animate-pulse" />
+                  <Sparkles className="w-4 h-4 text-amber-200 animate-pulse" />
                   Azamgarh AI Health Hub
                 </span>
-                <span className="text-[10px] bg-teal-800 px-2 py-0.5 rounded text-teal-200">
+                <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded text-white">
                   Gemini 3.5 & Nano
                 </span>
               </button>
@@ -357,7 +357,7 @@ export const Header: React.FC = () => {
                   setActiveView('home');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left"
+                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left hover:bg-orange-50 hover:text-[#E65100]"
               >
                 🏠 Home
               </button>
@@ -366,7 +366,7 @@ export const Header: React.FC = () => {
                   viewCategory('bp-monitors');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left"
+                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left hover:bg-orange-50 hover:text-[#E65100]"
               >
                 ❤️ BP Care
               </button>
@@ -375,7 +375,7 @@ export const Header: React.FC = () => {
                   viewCategory('glucometers');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left"
+                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left hover:bg-orange-50 hover:text-[#E65100]"
               >
                 🩸 Diabetes Care
               </button>
@@ -384,7 +384,7 @@ export const Header: React.FC = () => {
                   viewCategory('nebulizers');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left"
+                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left hover:bg-orange-50 hover:text-[#E65100]"
               >
                 🫁 Respiratory Care
               </button>
@@ -393,7 +393,7 @@ export const Header: React.FC = () => {
                   viewCategory('orthopedic-supports');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left"
+                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left hover:bg-orange-50 hover:text-[#E65100]"
               >
                 🦴 Orthopedic
               </button>
@@ -411,7 +411,7 @@ export const Header: React.FC = () => {
                   setActiveView('track-order');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left"
+                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left hover:bg-orange-50 hover:text-[#E65100]"
               >
                 🚚 Track Order
               </button>
@@ -420,7 +420,7 @@ export const Header: React.FC = () => {
                   setActiveView('compare');
                   setIsMobileMenuOpen(false);
                 }}
-                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left"
+                className="p-2 bg-slate-50 rounded-lg text-slate-800 text-left hover:bg-orange-50 hover:text-[#E65100]"
               >
                 ⚖️ Compare ({compareList.length})
               </button>
@@ -432,7 +432,7 @@ export const Header: React.FC = () => {
                   setIsMobileMenuOpen(false);
                   setIsPincodeModalOpen(true);
                 }}
-                className="text-teal-700 font-semibold"
+                className="text-[#F57C00] font-semibold hover:text-[#E65100]"
               >
                 Change PIN
               </button>

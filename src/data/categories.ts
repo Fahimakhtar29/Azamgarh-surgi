@@ -35,7 +35,7 @@ export const CATEGORIES: CategoryInfo[] = [
     count: 10,
     iconName: 'Activity',
     image: bpDeviceImg,
-    colorBg: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+    colorBg: 'bg-orange-50 text-[#E65100] border-orange-200'
   },
   {
     id: 'glucometers',
@@ -45,7 +45,7 @@ export const CATEGORIES: CategoryInfo[] = [
     count: 8,
     iconName: 'Droplet',
     image: glDeviceImg,
-    colorBg: 'bg-sky-50 text-sky-700 border-sky-200'
+    colorBg: 'bg-amber-50 text-amber-800 border-amber-200'
   },
   {
     id: 'glucose-strips',
@@ -55,7 +55,7 @@ export const CATEGORIES: CategoryInfo[] = [
     count: 7,
     iconName: 'Layers',
     image: glStripsImg,
-    colorBg: 'bg-teal-50 text-teal-700 border-teal-200'
+    colorBg: 'bg-orange-50 text-[#F57C00] border-orange-200'
   },
   {
     id: 'pulse-oximeters',

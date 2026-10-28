@@ -71,13 +71,13 @@ export const GoogleSearchGroundingHub: React.FC = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-200">
         <div>
           <div className="flex items-center gap-2">
-            <span className="p-2 rounded-xl bg-sky-100 text-sky-800">
+            <span className="p-2 rounded-xl bg-orange-50 text-[#E65100] border border-orange-200">
               <Globe className="w-5 h-5" />
             </span>
-            <h2 className="text-xl font-bold text-slate-900 font-display">
+            <h2 className="text-xl font-bold text-[#0F172A] font-display">
               Google Search Grounding Hub
             </h2>
-            <span className="text-xs px-2.5 py-0.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium">
+            <span className="text-xs px-2.5 py-0.5 rounded-full bg-orange-50 text-[#E65100] border border-orange-200 font-medium">
               Live Web Verified
             </span>
           </div>
@@ -86,7 +86,7 @@ export const GoogleSearchGroundingHub: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 text-xs text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 self-start sm:self-auto">
+        <div className="flex items-center gap-2 text-xs text-slate-600 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200 self-start sm:self-auto">
           <ShieldCheck className="w-4 h-4 text-emerald-600" />
           <span>Verified Web Grounding</span>
         </div>
@@ -102,20 +102,20 @@ export const GoogleSearchGroundingHub: React.FC = () => {
           className="flex flex-col sm:flex-row gap-2"
         >
           <div className="relative flex-1">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-600" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search CDSCO advisories, device calibration, clinical trials, recall alerts..."
-              className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl pl-10 pr-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white transition-all"
+              className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl pl-10 pr-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#F57C00] focus:border-[#F57C00] focus:bg-white transition-all"
             />
           </div>
 
           <button
             type="submit"
             disabled={!query.trim() || loading}
-            className="px-5 py-2.5 bg-sky-600 hover:bg-sky-700 disabled:bg-slate-300 text-white rounded-xl font-medium text-sm transition-all flex items-center justify-center gap-2 shadow-sm disabled:cursor-not-allowed"
+            className="px-5 py-2.5 bg-[#F57C00] hover:bg-[#E65100] disabled:bg-slate-300 text-white rounded-xl font-medium text-sm transition-all flex items-center justify-center gap-2 shadow-sm disabled:cursor-not-allowed"
           >
             {loading ? (
               <>
@@ -142,7 +142,7 @@ export const GoogleSearchGroundingHub: React.FC = () => {
                 key={idx}
                 type="button"
                 onClick={() => handleSearch(item)}
-                className="text-xs bg-slate-100 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-300 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 transition-all text-left"
+                className="text-xs bg-slate-100 hover:bg-orange-50 hover:text-[#E65100] hover:border-orange-300 text-slate-700 px-3 py-1 rounded-lg border border-slate-200 transition-all text-left"
               >
                 {item}
               </button>

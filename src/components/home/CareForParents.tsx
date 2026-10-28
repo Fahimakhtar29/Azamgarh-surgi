@@ -13,10 +13,10 @@ export const CareForParents: React.FC = () => {
   );
 
   return (
-    <section className="py-14 bg-gradient-to-b from-teal-50/70 via-slate-50 to-white border-b border-slate-200">
+    <section className="py-14 bg-gradient-to-b from-orange-50/40 via-white to-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Banner with emotional & clinical copy */}
-        <div className="bg-white rounded-2xl border border-teal-200/80 shadow-md overflow-hidden mb-10">
+        <div className="bg-white rounded-2xl border border-orange-200/90 shadow-md overflow-hidden mb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             {/* Left Image */}
             <div className="lg:col-span-5 h-[280px] lg:h-[380px] overflow-hidden relative">
@@ -25,9 +25,9 @@ export const CareForParents: React.FC = () => {
                 alt="Daughter checking senior father's blood pressure at home"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-teal-950/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white text-xs">
-                <span className="bg-teal-700 font-bold px-2.5 py-1 rounded text-[11px] uppercase tracking-wide">
+                <span className="bg-[#F57C00] font-bold px-2.5 py-1 rounded text-[11px] uppercase tracking-wide shadow-2xs">
                   Senior Wellness Initiative
                 </span>
                 <p className="mt-2 text-slate-100 font-medium">
@@ -38,12 +38,12 @@ export const CareForParents: React.FC = () => {
 
             {/* Right Copy */}
             <div className="lg:col-span-7 p-6 sm:p-8 space-y-4">
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-800 bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
-                <Heart className="w-3.5 h-3.5 fill-teal-600 text-teal-600" />
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E65100] bg-orange-50 px-3 py-1 rounded-full border border-orange-200">
+                <Heart className="w-3.5 h-3.5 fill-[#F57C00] text-[#F57C00]" />
                 <span>Family Healthcare Caregiving</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display leading-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display leading-tight">
                 Care For Your Parents — Delivered Directly to Their Door
               </h2>
 
@@ -53,25 +53,25 @@ export const CareForParents: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 text-xs text-slate-700">
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-orange-100 text-[#E65100] flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3" />
                   </div>
                   <span>Large high-contrast screens for poor eyesight</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-orange-100 text-[#E65100] flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3" />
                   </div>
                   <span>Voice readout talking monitors in Hindi</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-orange-100 text-[#E65100] flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3" />
                   </div>
                   <span>Lightweight foldable walking sticks & supports</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-orange-100 text-[#E65100] flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3" />
                   </div>
                   <span>Automatic shutoff and pain-free lancing lancets</span>
@@ -81,7 +81,7 @@ export const CareForParents: React.FC = () => {
               <div className="pt-3 flex flex-wrap items-center gap-3">
                 <button
                   onClick={() => viewCategory('combo-kits')}
-                  className="px-5 py-2.5 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+                  className="px-5 py-2.5 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer shadow-xs"
                 >
                   <span>Explore Senior Care Kits</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -97,12 +97,12 @@ export const CareForParents: React.FC = () => {
         {/* Recommended Products for Parents */}
         <div>
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-bold text-slate-900 font-display">
+            <h3 className="text-lg font-bold text-[#0F172A] font-display">
               Recommended Healthcare Devices for Parents
             </h3>
             <button
               onClick={() => viewCategory('all')}
-              className="text-xs font-semibold text-teal-800 hover:underline flex items-center gap-1"
+              className="text-xs font-semibold text-[#F57C00] hover:text-[#E65100] flex items-center gap-1 cursor-pointer"
             >
               <span>View All</span>
               <ArrowRight className="w-3 h-3" />

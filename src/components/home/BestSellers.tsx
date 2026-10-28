@@ -9,15 +9,15 @@ export const BestSellers: React.FC = () => {
   const bestSellerProducts = products.filter((p) => p.isBestSeller).slice(0, 8);
 
   return (
-    <section className="py-12 bg-slate-50 border-b border-slate-200">
+    <section className="py-12 bg-white border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-2">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-teal-800">
-              <Sparkles className="w-3.5 h-3.5 text-teal-600" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E65100]">
+              <Sparkles className="w-3.5 h-3.5 text-[#F57C00]" />
               <span>Verified Customer Favorites</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display mt-1">
               Best Sellers in Healthcare & Diagnostics
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -27,7 +27,7 @@ export const BestSellers: React.FC = () => {
 
           <button
             onClick={() => viewCategory('all')}
-            className="text-xs font-semibold text-teal-800 hover:text-teal-900 flex items-center gap-1 cursor-pointer shrink-0"
+            className="text-xs font-semibold text-[#F57C00] hover:text-[#E65100] flex items-center gap-1 cursor-pointer shrink-0"
           >
             <span>View All Bestsellers</span>
             <ArrowRight className="w-3.5 h-3.5" />

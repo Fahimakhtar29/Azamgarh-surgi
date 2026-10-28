@@ -76,7 +76,7 @@ export const ProductQuickViewModal: React.FC = () => {
                     key={i}
                     onClick={() => setSelectedImageIdx(i)}
                     className={`w-14 h-14 rounded-lg overflow-hidden border-2 transition-all cursor-pointer ${
-                      selectedImageIdx === i ? 'border-teal-700 ring-2 ring-teal-100' : 'border-slate-200'
+                      selectedImageIdx === i ? 'border-[#F57C00] ring-2 ring-orange-100' : 'border-slate-200'
                     }`}
                   >
                     <ImageWithFallback src={img} alt="thumb" category={product.category} className="w-full h-full object-cover" />
@@ -98,10 +98,10 @@ export const ProductQuickViewModal: React.FC = () => {
           {/* Details right */}
           <div className="flex flex-col justify-between">
             <div>
-              <div className="text-xs text-slate-500 font-semibold tracking-wide uppercase text-teal-800">
+              <div className="text-xs font-semibold tracking-wide uppercase text-[#E65100]">
                 {product.brand} · {product.subcategory || product.category}
               </div>
-              <h2 className="text-lg font-bold text-slate-900 mt-1 leading-snug">
+              <h2 className="text-lg font-bold text-[#0F172A] mt-1 leading-snug">
                 {product.name}
               </h2>
               <div className="text-xs text-slate-400 mt-0.5">SKU: {product.sku}</div>
@@ -117,7 +117,7 @@ export const ProductQuickViewModal: React.FC = () => {
 
               {/* Price */}
               <div className="mt-3 flex items-baseline gap-2.5">
-                <span className="text-2xl font-bold text-slate-900 font-mono tabular-nums">
+                <span className="text-2xl font-bold text-[#0F172A] font-mono tabular-nums">
                   ₹{product.sellingPrice.toLocaleString('en-IN')}
                 </span>
                 <span className="text-sm text-slate-400 line-through font-mono tabular-nums">
@@ -183,14 +183,14 @@ export const ProductQuickViewModal: React.FC = () => {
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={handleAddToCart}
-                  className="py-2.5 px-3 bg-teal-50 hover:bg-teal-100 text-teal-900 border border-teal-300 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                  className="py-2.5 px-3 bg-orange-50 hover:bg-orange-100 text-[#E65100] border border-orange-200/90 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                 >
-                  <ShoppingCart className="w-4 h-4" />
+                  <ShoppingCart className="w-4 h-4 text-[#F57C00]" />
                   <span>Add to Cart</span>
                 </button>
                 <button
                   onClick={handleBuyNow}
-                  className="py-2.5 px-3 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
+                  className="py-2.5 px-3 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
                 >
                   <Zap className="w-4 h-4 fill-white" />
                   <span>Buy Now</span>
@@ -209,7 +209,7 @@ export const ProductQuickViewModal: React.FC = () => {
 
                 <button
                   onClick={() => addToCompare(product)}
-                  className="flex items-center gap-1 text-slate-600 hover:text-teal-800 cursor-pointer py-1"
+                  className="flex items-center gap-1 text-slate-600 hover:text-[#E65100] cursor-pointer py-1"
                 >
                   <Scale className="w-4 h-4 text-slate-400" />
                   <span>{isCompared ? 'In Compare List' : 'Add to Compare'}</span>
@@ -220,7 +220,7 @@ export const ProductQuickViewModal: React.FC = () => {
                     handleClose();
                     viewProduct(product);
                   }}
-                  className="text-teal-700 hover:underline font-semibold"
+                  className="text-[#F57C00] hover:text-[#E65100] hover:underline font-semibold"
                 >
                   Full Details & Reviews →
                 </button>

@@ -36,18 +36,18 @@ export const TrustBadges: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white border-b border-slate-200 py-6">
+    <section className="bg-white border-b border-slate-200/80 py-7">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
           {badges.map((b, i) => {
             const Icon = b.icon;
             return (
               <div key={i} className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                <div className="w-10 h-10 rounded-lg bg-teal-50 text-teal-800 flex items-center justify-center mb-2 shrink-0 border border-teal-100">
+                <div className="w-10 h-10 rounded-lg bg-orange-50 text-[#F57C00] flex items-center justify-center mb-2 shrink-0 border border-orange-100/90 shadow-2xs">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h4 className="text-xs font-bold text-slate-900 leading-tight">
-                  ✓ {b.title}
+                <h4 className="text-xs font-bold text-[#0F172A] leading-tight">
+                  <span className="text-[#F57C00] mr-1">✓</span>{b.title}
                 </h4>
                 <p className="text-[11px] text-slate-500 mt-0.5 leading-snug">
                   {b.desc}

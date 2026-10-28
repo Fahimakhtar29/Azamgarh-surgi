@@ -20,15 +20,15 @@ export const OffersPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen py-10">
+    <div className="bg-white min-h-screen py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-rose-50 text-rose-700 rounded-full text-xs font-bold border border-rose-200">
-            <Tag className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-50 text-[#E65100] rounded-full text-xs font-bold border border-orange-200">
+            <Tag className="w-3.5 h-3.5 text-[#F57C00]" />
             <span>Healthcare Savings Hub</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-display mt-2">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] font-display mt-2">
             Deals, Combos & Diagnostic Offers
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 mt-2">
@@ -38,18 +38,18 @@ export const OffersPage: React.FC = () => {
 
         {/* Coupons Showcase */}
         <div>
-          <h2 className="text-lg font-bold text-slate-900 font-display mb-4">
+          <h2 className="text-lg font-bold text-[#0F172A] font-display mb-4">
             Active Promo Codes
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {coupons.map((c) => (
               <div
                 key={c.code}
-                className="p-5 bg-white rounded-2xl border-2 border-dashed border-teal-300 relative overflow-hidden flex flex-col justify-between shadow-2xs"
+                className="p-5 bg-white rounded-2xl border-2 border-dashed border-orange-300 relative overflow-hidden flex flex-col justify-between shadow-2xs hover:border-[#F57C00] transition-colors"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono font-extrabold text-base text-teal-900 bg-teal-50 px-2.5 py-1 rounded border border-teal-200">
+                    <span className="font-mono font-extrabold text-base text-[#E65100] bg-orange-50 px-2.5 py-1 rounded border border-orange-200">
                       {c.code}
                     </span>
                     <span className="text-[11px] font-bold text-rose-600">
@@ -65,7 +65,7 @@ export const OffersPage: React.FC = () => {
                   <span className="text-[11px] text-slate-400">Min Order ₹{c.minOrderValue}</span>
                   <button
                     onClick={() => handleCopyCode(c.code)}
-                    className="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white rounded-lg text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
+                    className="px-3 py-1.5 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-xs font-bold flex items-center gap-1 transition-colors cursor-pointer"
                   >
                     {copiedCoupon === c.code ? (
                       <>
@@ -89,7 +89,7 @@ export const OffersPage: React.FC = () => {
         <div>
           <div className="flex items-center justify-between mb-5">
             <div>
-              <h2 className="text-xl font-bold text-slate-900 font-display">
+              <h2 className="text-xl font-bold text-[#0F172A] font-display">
                 Budget Care: Under ₹499
               </h2>
               <p className="text-xs text-slate-500">
@@ -108,7 +108,7 @@ export const OffersPage: React.FC = () => {
         <div>
           <div className="flex items-center justify-between mb-5">
             <div>
-              <h2 className="text-xl font-bold text-slate-900 font-display">
+              <h2 className="text-xl font-bold text-[#0F172A] font-display">
                 Everyday Diagnostics: Under ₹999
               </h2>
               <p className="text-xs text-slate-500">
@@ -127,7 +127,7 @@ export const OffersPage: React.FC = () => {
         <div>
           <div className="flex items-center justify-between mb-5">
             <div>
-              <h2 className="text-xl font-bold text-slate-900 font-display">
+              <h2 className="text-xl font-bold text-[#0F172A] font-display">
                 Deep Discounts (40% OFF or More)
               </h2>
               <p className="text-xs text-slate-500">

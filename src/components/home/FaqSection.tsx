@@ -33,14 +33,14 @@ export const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-14 bg-slate-50 border-b border-slate-200">
+    <section className="py-14 bg-white border-b border-slate-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-teal-800">
-            <HelpCircle className="w-3.5 h-3.5 text-teal-600" />
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#E65100]">
+            <HelpCircle className="w-3.5 h-3.5 text-[#F57C00]" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight font-display mt-1">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] tracking-tight font-display mt-1">
             Frequently Asked Questions
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -54,17 +54,17 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-xl border border-slate-200 overflow-hidden transition-colors"
+                className="bg-white rounded-xl border border-slate-200 hover:border-orange-200/90 overflow-hidden transition-colors"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-semibold text-xs sm:text-sm text-slate-900 hover:text-teal-800 transition-colors cursor-pointer"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-semibold text-xs sm:text-sm text-[#0F172A] hover:text-[#E65100] transition-colors cursor-pointer"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
                     className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-teal-700' : ''
+                      isOpen ? 'rotate-180 text-[#F57C00]' : ''
                     }`}
                   />
                 </button>

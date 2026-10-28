@@ -49,8 +49,8 @@ export const PincodeModal: React.FC<PincodeModalProps> = ({ isOpen, onClose }) =
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
       <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-2xl border border-slate-200">
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-          <div className="flex items-center gap-2 text-teal-800 font-semibold text-lg">
-            <MapPin className="w-5 h-5 text-teal-600" />
+          <div className="flex items-center gap-2 text-[#0F172A] font-semibold text-lg">
+            <MapPin className="w-5 h-5 text-[#F57C00]" />
             <span>Select Delivery Location</span>
           </div>
           <button
@@ -77,12 +77,12 @@ export const PincodeModal: React.FC<PincodeModalProps> = ({ isOpen, onClose }) =
                   setCheckResult(null);
                 }}
                 placeholder="Enter 6-digit PIN (e.g. 276001)"
-                className="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm font-mono tracking-wider focus:ring-2 focus:ring-teal-600 focus:border-teal-600 outline-none"
+                className="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm font-mono tracking-wider focus:ring-2 focus:ring-orange-200 focus:border-[#F57C00] outline-none"
               />
             </div>
             <button
               type="submit"
-              className="px-5 py-2.5 bg-teal-700 hover:bg-teal-800 text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
+              className="px-5 py-2.5 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg text-sm font-medium transition-colors cursor-pointer"
             >
               Verify
             </button>
@@ -130,7 +130,7 @@ export const PincodeModal: React.FC<PincodeModalProps> = ({ isOpen, onClose }) =
                 onClick={() => handleSelectPredefined(c.pin)}
                 className={`text-xs px-2.5 py-1 rounded-md border transition-colors cursor-pointer ${
                   pinInput === c.pin
-                    ? 'border-teal-600 bg-teal-50 text-teal-800 font-medium'
+                    ? 'border-[#F57C00] bg-orange-50 text-[#E65100] font-medium'
                     : 'border-slate-200 hover:border-slate-300 text-slate-600 bg-slate-50'
                 }`}
               >
@@ -143,7 +143,7 @@ export const PincodeModal: React.FC<PincodeModalProps> = ({ isOpen, onClose }) =
         <div className="mt-6">
           <button
             onClick={onClose}
-            className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+            className="w-full py-2.5 bg-[#0F172A] hover:bg-[#1E293B] text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
           >
             <span>Confirm & Continue</span>
             <ArrowRight className="w-4 h-4" />

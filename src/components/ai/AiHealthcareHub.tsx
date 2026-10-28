@@ -67,13 +67,13 @@ export const AiHealthcareHub: React.FC<AiHealthcareHubProps> = ({ initialTab = '
   ];
 
   return (
-    <div className="py-8 bg-slate-50 min-h-screen">
+    <div className="py-8 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Hub Banner */}
-        <div className="rounded-3xl bg-gradient-to-r from-teal-950 via-teal-900 to-slate-950 text-white p-6 sm:p-8 relative overflow-hidden shadow-sm mb-8 border border-teal-800/40">
+        <div className="rounded-3xl bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0A192F] text-white p-6 sm:p-8 relative overflow-hidden shadow-sm mb-8 border border-slate-800">
           <div className="relative z-10 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 border border-teal-400/30 text-xs font-semibold mb-3">
-              <Sparkles className="w-3.5 h-3.5 text-teal-300 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-[#F57C00] border border-orange-400/30 text-xs font-semibold mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-[#F57C00] animate-pulse" />
               <span>Next-Gen Healthcare Intelligence</span>
             </div>
 
@@ -81,21 +81,21 @@ export const AiHealthcareHub: React.FC<AiHealthcareHubProps> = ({ initialTab = '
               Azamgarh AI Healthcare Hub
             </h1>
 
-            <p className="text-sm sm:text-base text-teal-100/90 mt-2 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-200 mt-2 leading-relaxed">
               Powered by advanced Google Gemini models: Multi-turn device consulting, Google Search regulatory grounding, Google Maps healthcare locator, and gemini-nano-banana-2.1 medical image creation & editing.
             </p>
 
-            <div className="flex flex-wrap items-center gap-3 sm:gap-6 mt-4 pt-4 border-t border-teal-800/60 text-xs text-teal-200">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-6 mt-4 pt-4 border-t border-slate-800 text-xs text-slate-300">
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <CheckCircle2 className="w-4 h-4 text-[#F57C00]" />
                 Multi-Turn Conversation Memory
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <CheckCircle2 className="w-4 h-4 text-[#F57C00]" />
                 Live Google Search & Maps Grounding
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <CheckCircle2 className="w-4 h-4 text-[#F57C00]" />
                 Text-to-Image Creation & Editing
               </span>
             </div>
@@ -112,10 +112,10 @@ export const AiHealthcareHub: React.FC<AiHealthcareHubProps> = ({ initialTab = '
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`p-4 rounded-2xl text-left transition-all border flex flex-col justify-between ${
+                className={`p-4 rounded-2xl text-left transition-all border flex flex-col justify-between cursor-pointer ${
                   isActive
-                    ? 'bg-white border-teal-600 shadow-md ring-2 ring-teal-500/20'
-                    : 'bg-white/80 border-slate-200 hover:border-slate-300 hover:bg-white'
+                    ? 'bg-white border-[#F57C00] shadow-md ring-2 ring-orange-500/20'
+                    : 'bg-white/80 border-slate-200 hover:border-orange-200 hover:bg-white'
                 }`}
               >
                 <div>
@@ -123,7 +123,7 @@ export const AiHealthcareHub: React.FC<AiHealthcareHubProps> = ({ initialTab = '
                     <span
                       className={`p-2.5 rounded-xl ${
                         isActive
-                          ? 'bg-teal-700 text-white'
+                          ? 'bg-[#F57C00] text-white'
                           : 'bg-slate-100 text-slate-700'
                       }`}
                     >
@@ -136,7 +136,7 @@ export const AiHealthcareHub: React.FC<AiHealthcareHubProps> = ({ initialTab = '
 
                   <h3
                     className={`font-bold text-sm sm:text-base ${
-                      isActive ? 'text-teal-950 font-display' : 'text-slate-800'
+                      isActive ? 'text-[#0F172A] font-display' : 'text-slate-800'
                     }`}
                   >
                     {tab.label}
@@ -150,14 +150,14 @@ export const AiHealthcareHub: React.FC<AiHealthcareHubProps> = ({ initialTab = '
                 <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
                   <span
                     className={`font-semibold ${
-                      isActive ? 'text-teal-700' : 'text-slate-600'
+                      isActive ? 'text-[#F57C00]' : 'text-slate-600'
                     }`}
                   >
                     {isActive ? 'Active Feature' : 'Switch Tab'}
                   </span>
                   <ArrowRight
                     className={`w-3.5 h-3.5 ${
-                      isActive ? 'text-teal-700 translate-x-0.5' : 'text-slate-600'
+                      isActive ? 'text-[#F57C00] translate-x-0.5' : 'text-slate-600'
                     }`}
                   />
                 </div>

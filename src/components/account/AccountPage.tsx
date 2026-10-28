@@ -41,13 +41,13 @@ export const AccountPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen py-10">
+    <div className="bg-white min-h-screen py-10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="mb-8">
-          <span className="text-xs font-bold text-teal-800 uppercase tracking-wider">
+          <span className="text-xs font-bold text-[#E65100] uppercase tracking-wider">
             Customer Dashboard
           </span>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 font-display mt-0.5">
+          <h1 className="text-2xl sm:text-3xl font-bold text-[#0F172A] font-display mt-0.5">
             My Account & Purchases
           </h1>
         </div>
@@ -57,11 +57,11 @@ export const AccountPage: React.FC = () => {
           <div className="lg:col-span-4 bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-4">
             {/* User Profile Card */}
             <div className="flex items-center gap-3 pb-4 border-b border-slate-100">
-              <div className="w-12 h-12 rounded-full bg-teal-800 text-white font-bold flex items-center justify-center text-lg shadow-xs">
+              <div className="w-12 h-12 rounded-full bg-[#F57C00] text-white font-bold flex items-center justify-center text-lg shadow-xs">
                 {customerAddress.fullName.charAt(0)}
               </div>
               <div className="truncate">
-                <h3 className="font-bold text-sm text-slate-900 truncate">
+                <h3 className="font-bold text-sm text-[#0F172A] truncate">
                   {customerAddress.fullName}
                 </h3>
                 <span className="text-xs text-slate-500 font-mono">
@@ -76,8 +76,8 @@ export const AccountPage: React.FC = () => {
                 onClick={() => setActiveTab('orders')}
                 className={`w-full flex items-center justify-between p-3 rounded-xl transition-colors cursor-pointer ${
                   activeTab === 'orders'
-                    ? 'bg-teal-800 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-50'
+                    ? 'bg-[#F57C00] text-white shadow-xs'
+                    : 'text-slate-700 hover:bg-orange-50/50'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
@@ -91,8 +91,8 @@ export const AccountPage: React.FC = () => {
                 onClick={() => setActiveTab('wishlist')}
                 className={`w-full flex items-center justify-between p-3 rounded-xl transition-colors cursor-pointer ${
                   activeTab === 'wishlist'
-                    ? 'bg-teal-800 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-50'
+                    ? 'bg-[#F57C00] text-white shadow-xs'
+                    : 'text-slate-700 hover:bg-orange-50/50'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
@@ -106,8 +106,8 @@ export const AccountPage: React.FC = () => {
                 onClick={() => setActiveTab('addresses')}
                 className={`w-full flex items-center justify-between p-3 rounded-xl transition-colors cursor-pointer ${
                   activeTab === 'addresses'
-                    ? 'bg-teal-800 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-50'
+                    ? 'bg-[#F57C00] text-white shadow-xs'
+                    : 'text-slate-700 hover:bg-orange-50/50'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
@@ -121,8 +121,8 @@ export const AccountPage: React.FC = () => {
                 onClick={() => setActiveTab('profile')}
                 className={`w-full flex items-center justify-between p-3 rounded-xl transition-colors cursor-pointer ${
                   activeTab === 'profile'
-                    ? 'bg-teal-800 text-white shadow-xs'
-                    : 'text-slate-700 hover:bg-slate-50'
+                    ? 'bg-[#F57C00] text-white shadow-xs'
+                    : 'text-slate-700 hover:bg-orange-50/50'
                 }`}
               >
                 <div className="flex items-center gap-2.5">
@@ -140,7 +140,7 @@ export const AccountPage: React.FC = () => {
             {activeTab === 'orders' && (
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <h2 className="text-base font-bold text-slate-900 font-display">
+                  <h2 className="text-base font-bold text-[#0F172A] font-display">
                     Order History ({orders.length})
                   </h2>
                   <span className="text-xs text-slate-500">All India Dispatches</span>
@@ -155,7 +155,7 @@ export const AccountPage: React.FC = () => {
                       >
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3 text-xs">
                           <div>
-                            <span className="font-bold text-slate-900 font-mono text-sm block">
+                            <span className="font-bold text-[#0F172A] font-mono text-sm block">
                               {ord.orderNumber}
                             </span>
                             <span className="text-slate-500 text-[11px]">
@@ -164,10 +164,10 @@ export const AccountPage: React.FC = () => {
                           </div>
 
                           <div className="flex items-center gap-2">
-                            <span className="px-2.5 py-1 bg-teal-100 text-teal-800 font-bold rounded text-[11px]">
+                            <span className="px-2.5 py-1 bg-orange-50 text-[#E65100] border border-orange-200 font-bold rounded text-[11px]">
                               {ord.status}
                             </span>
-                            <span className="font-mono font-bold text-slate-900 text-sm">
+                            <span className="font-mono font-bold text-[#0F172A] text-sm">
                               ₹{ord.totalAmount.toLocaleString('en-IN')}
                             </span>
                           </div>
@@ -188,7 +188,7 @@ export const AccountPage: React.FC = () => {
                                 </span>
                                 <span className="text-slate-400">Qty: {item.quantity} · {item.brand}</span>
                               </div>
-                              <span className="font-mono font-bold text-slate-800">
+                              <span className="font-mono font-bold text-[#0F172A]">
                                 ₹{(item.price * item.quantity).toLocaleString('en-IN')}
                               </span>
                             </div>
@@ -199,7 +199,7 @@ export const AccountPage: React.FC = () => {
                         <div className="flex items-center justify-between pt-2 text-xs">
                           <button
                             onClick={() => setActiveView('track-order')}
-                            className="text-teal-800 font-bold hover:underline flex items-center gap-1 cursor-pointer"
+                            className="text-[#F57C00] font-bold hover:underline flex items-center gap-1 cursor-pointer"
                           >
                             <Truck className="w-3.5 h-3.5" />
                             <span>Track Consignment</span>
@@ -210,7 +210,7 @@ export const AccountPage: React.FC = () => {
                               const prod = products.find((p) => p.id === ord.items[0]?.productId);
                               if (prod) addToCart(prod, 1);
                             }}
-                            className="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-semibold cursor-pointer"
+                            className="px-3 py-1.5 bg-[#0F172A] hover:bg-[#1E293B] text-white rounded-lg text-xs font-semibold cursor-pointer transition-colors"
                           >
                             Reorder Items
                           </button>
@@ -230,7 +230,7 @@ export const AccountPage: React.FC = () => {
             {activeTab === 'wishlist' && (
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <h2 className="text-base font-bold text-slate-900 font-display">
+                  <h2 className="text-base font-bold text-[#0F172A] font-display">
                     Saved Medical Devices ({wishlistProducts.length})
                   </h2>
                 </div>
@@ -253,13 +253,13 @@ export const AccountPage: React.FC = () => {
 
                         <div className="flex-1 flex flex-col justify-between">
                           <div>
-                            <span className="font-bold text-teal-800 text-[10px] uppercase">
+                            <span className="font-bold text-[#E65100] text-[10px] uppercase">
                               {p.brand}
                             </span>
-                            <h4 className="font-semibold text-slate-900 line-clamp-1">
+                            <h4 className="font-semibold text-[#0F172A] line-clamp-1">
                               {p.name}
                             </h4>
-                            <span className="font-mono font-bold text-slate-900">
+                            <span className="font-mono font-bold text-[#0F172A]">
                               ₹{p.sellingPrice.toLocaleString('en-IN')}
                             </span>
                           </div>
@@ -270,7 +270,7 @@ export const AccountPage: React.FC = () => {
                                 addToCart(p, 1);
                                 toggleWishlist(p.id);
                               }}
-                              className="px-2.5 py-1 bg-teal-800 hover:bg-teal-900 text-white rounded text-[11px] font-semibold cursor-pointer"
+                              className="px-2.5 py-1 bg-[#F57C00] hover:bg-[#E65100] text-white rounded text-[11px] font-semibold cursor-pointer transition-colors"
                             >
                               Move to Cart
                             </button>
@@ -297,24 +297,24 @@ export const AccountPage: React.FC = () => {
             {activeTab === 'addresses' && (
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <h2 className="text-base font-bold text-slate-900 font-display">
+                  <h2 className="text-base font-bold text-[#0F172A] font-display">
                     Primary Delivery Address
                   </h2>
                   <button
                     onClick={() => setIsEditingAddress(!isEditingAddress)}
-                    className="text-xs font-semibold text-teal-800 hover:underline cursor-pointer"
+                    className="text-xs font-semibold text-[#F57C00] hover:text-[#E65100] hover:underline cursor-pointer"
                   >
                     {isEditingAddress ? 'Cancel' : 'Edit Address'}
                   </button>
                 </div>
 
                 {!isEditingAddress ? (
-                  <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-xs space-y-1.5">
+                  <div className="p-4 bg-orange-50/20 rounded-xl border border-orange-100 text-xs space-y-1.5">
                     <div className="flex items-center justify-between">
-                      <span className="font-bold text-slate-900 text-sm">
+                      <span className="font-bold text-[#0F172A] text-sm">
                         {customerAddress.fullName}
                       </span>
-                      <span className="px-2 py-0.5 bg-teal-100 text-teal-800 rounded font-semibold text-[10px]">
+                      <span className="px-2 py-0.5 bg-orange-50 text-[#E65100] border border-orange-200 rounded font-semibold text-[10px]">
                         {customerAddress.addressType} (Default)
                       </span>
                     </div>
@@ -343,7 +343,7 @@ export const AccountPage: React.FC = () => {
                         type="text"
                         value={addrForm.fullName}
                         onChange={(e) => setAddrForm({ ...addrForm, fullName: e.target.value })}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg outline-none focus:border-[#F57C00]"
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-2">
@@ -355,7 +355,7 @@ export const AccountPage: React.FC = () => {
                           type="text"
                           value={addrForm.mobile}
                           onChange={(e) => setAddrForm({ ...addrForm, mobile: e.target.value })}
-                          className="w-full px-3 py-2 border border-slate-300 rounded-lg font-mono"
+                          className="w-full px-3 py-2 border border-slate-300 rounded-lg font-mono outline-none focus:border-[#F57C00]"
                         />
                       </div>
                       <div>
@@ -366,7 +366,7 @@ export const AccountPage: React.FC = () => {
                           type="text"
                           value={addrForm.pincode}
                           onChange={(e) => setAddrForm({ ...addrForm, pincode: e.target.value })}
-                          className="w-full px-3 py-2 border border-slate-300 rounded-lg font-mono"
+                          className="w-full px-3 py-2 border border-slate-300 rounded-lg font-mono outline-none focus:border-[#F57C00]"
                         />
                       </div>
                     </div>
@@ -378,7 +378,7 @@ export const AccountPage: React.FC = () => {
                         type="text"
                         value={addrForm.houseFlat}
                         onChange={(e) => setAddrForm({ ...addrForm, houseFlat: e.target.value })}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-lg"
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg outline-none focus:border-[#F57C00]"
                       />
                     </div>
                     <div className="grid grid-cols-2 gap-2">
@@ -388,7 +388,7 @@ export const AccountPage: React.FC = () => {
                           type="text"
                           value={addrForm.city}
                           onChange={(e) => setAddrForm({ ...addrForm, city: e.target.value })}
-                          className="w-full px-3 py-2 border border-slate-300 rounded-lg"
+                          className="w-full px-3 py-2 border border-slate-300 rounded-lg outline-none focus:border-[#F57C00]"
                         />
                       </div>
                       <div>
@@ -397,13 +397,13 @@ export const AccountPage: React.FC = () => {
                           type="text"
                           value={addrForm.state}
                           onChange={(e) => setAddrForm({ ...addrForm, state: e.target.value })}
-                          className="w-full px-3 py-2 border border-slate-300 rounded-lg"
+                          className="w-full px-3 py-2 border border-slate-300 rounded-lg outline-none focus:border-[#F57C00]"
                         />
                       </div>
                     </div>
                     <button
                       type="submit"
-                      className="px-5 py-2 bg-teal-800 text-white rounded-lg font-bold"
+                      className="px-5 py-2 bg-[#F57C00] hover:bg-[#E65100] text-white rounded-lg font-bold transition-colors cursor-pointer"
                     >
                       Save Address
                     </button>
